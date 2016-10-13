@@ -8,6 +8,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.huiyouhui.R;
+import com.huiyouhui.activity.ApplyCashActivity;
 import com.huiyouhui.activity.CashActivity;
 import com.huiyouhui.activity.IntegralActivity;
 import com.huiyouhui.activity.RechargeActivity;
@@ -36,6 +37,7 @@ public class PersonMessageView extends BaseView {
     LinearLayout ll1;
     LinearLayout ll2;
     RelativeLayout rl1;
+    RelativeLayout rl2;
 
 
     public PersonMessageView(Context context) {
@@ -66,6 +68,7 @@ public class PersonMessageView extends BaseView {
         ll2 = (LinearLayout) findViewById(R.id.ll2);
         personIv5 = (ImageView) findViewById(R.id.person_iv_5);
         rl1 = (RelativeLayout) findViewById(R.id.rl_1);
+        rl2 = (RelativeLayout) findViewById(R.id.rl_2);
     }
 
     @Override
@@ -75,7 +78,7 @@ public class PersonMessageView extends BaseView {
 
     @Override
     public void setListeners() {
-        setOnListeners(icon, ll1, ll2, rl1);
+        setOnListeners(icon, ll1, ll2, rl1,rl2);
         setOnClick(new onClick() {
             @Override
             public void onClick(View v, int id) {
@@ -102,7 +105,10 @@ public class PersonMessageView extends BaseView {
 
                         goToActivityByClass(getContext(), RechargeActivity.class);
                         break;
-
+                    //申请提现
+                    case R.id.rl_2:
+                        goToActivityByClass(getContext(), ApplyCashActivity.class);
+                        break;
                 }
             }
         });

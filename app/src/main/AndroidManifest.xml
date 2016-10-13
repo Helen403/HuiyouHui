@@ -60,6 +60,7 @@
         <activity android:name=".activity.IntegralActivity"/>
         <activity android:name=".activity.CashActivity"/>
         <activity android:name=".activity.RechargeActivity"/>
+        <activity android:name=".activity.ApplyCashActivity"/>
 
     </application>
 

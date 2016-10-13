@@ -25,4 +25,14 @@
     <color name="bg_color_division">#f4f4f4</color>
     <color name="bg_color_transparent">#80000000</color>
 
+
+
+
+    <color name="background_window">#FFE5E5E5</color>
+    <color name="deep_green">#E82418</color>
+    <color name="green">#99CC00</color>
+    <color name="light_green">#9A9A9A</color>
+    <color name="background_green">#E2F0B6</color>
+    <color name="orange">#FFBB33</color>
+
 </resources>

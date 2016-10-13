@@ -64,7 +64,9 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         this.inflater = inflater;
-        activity = (MainActivity) getActivity();
+        if (getActivity() instanceof MainActivity) {
+            activity = (MainActivity) getActivity();
+        }
         dealLogicBeforeFindView();
         //总布局
         content = new RelativeLayout(getActivity());
@@ -554,7 +556,7 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
      */
     protected void setOnListeners(View... views) {
         for (View view : views) {
-                view.setOnClickListener(this);
+            view.setOnClickListener(this);
         }
     }
 

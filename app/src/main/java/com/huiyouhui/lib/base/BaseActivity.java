@@ -37,7 +37,6 @@ import android.widget.Toast;
 
 import com.huiyouhui.R;
 import com.huiyouhui.lib.Utils.ImageUtils;
-import com.huiyouhui.lib.Utils.SystemBarUtils;
 import com.huiyouhui.lib.custemview.BufferCircleView;
 import com.huiyouhui.lib.custemview.MyNetFailView;
 
@@ -60,23 +59,20 @@ public abstract class BaseActivity extends FragmentActivity implements View.OnCl
     /*************************************/
     protected RelativeLayout content;
     //状态栏
-    ImageView status;
+    protected ImageView status;
 
     //全布局
     protected LinearLayout ly_content;
     // 外界传入内容区域的布局
     protected ViewGroup contentView;
     //头部View
-    protected LinearLayout head_view;
+    protected RelativeLayout head_view;
     protected TextView tv_left, tv_title, tv_right;
     /*******************************************/
     //设置左边默认图片
     protected static final int leftDrawable = R.mipmap.ic_launcher;
     //设置右边默认图片
     private static final int RightDrawable = R.mipmap.ic_launcher;
-    /*******************************************/
-    //判断是否铺满全屏
-    protected boolean isAllowFullScreen;
     /*******************************************/
     //加载中的View
     protected BufferCircleView bufferCircleView;
@@ -187,8 +183,7 @@ public abstract class BaseActivity extends FragmentActivity implements View.OnCl
         super.onCreate(savedInstanceState);
         fm = this.getSupportFragmentManager();
         dealLogicBeforeFindView();
-        setFullScreen(isAllowFullScreen);
-        SystemBarUtils.initSystemBarElse(this, color);
+        setFullScreen();
         getBuildContentView();
         onShowMessage(content);
         setContentView(content);
@@ -271,50 +266,34 @@ public abstract class BaseActivity extends FragmentActivity implements View.OnCl
         ly_content.addView(status);
 
         //创建一个头部View 高度为44
-        head_view = new LinearLayout(this);
-        head_view.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, dip2px(this, 44)));
+        inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        head_view = (RelativeLayout) inflater.inflate(R.layout.custermview_head_view,ly_content,false);
         head_view.setBackgroundColor(color);
         ly_content.addView(head_view);
 
         //添加左边的按钮
-        tv_left = new TextView(this);
-        LinearLayout.LayoutParams btnLeftLayoutParams = new LinearLayout.LayoutParams(dip2px(this, 44), LinearLayout.LayoutParams.MATCH_PARENT);
-        tv_left.setLayoutParams(btnLeftLayoutParams);
-        tv_left.setBackgroundColor(color);
-        tv_left.setGravity(Gravity.CENTER);
-        tv_left.setPadding(dip2px(this, 10), dip2px(this, 10), dip2px(this, 10), dip2px(this, 10));
+        tv_left = (TextView) head_view.findViewById(R.id.tv_left);
         Drawable drawableLeft = ContextCompat.getDrawable(this, leftDrawable);
         assert drawableLeft != null;
         drawableLeft.setBounds(0, 0, dip2px(this, 30), dip2px(this, 30));//第一0是距左边距离，第二0是距上边距离，40分别是长宽
         tv_left.setCompoundDrawables(null, drawableLeft, null, null);//只放上边
-        head_view.addView(tv_left);
 
         //添加中间的文本
-        tv_title = new TextView(this);
-        LinearLayout.LayoutParams TextViewLayoutParams = new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.MATCH_PARENT, 1.0f);
-        TextViewLayoutParams.setMargins(dip2px(this, 10), dip2px(this, 5), dip2px(this, 10), dip2px(this, 5));
-        tv_title.setLayoutParams(TextViewLayoutParams);
-        tv_title.setBackgroundColor(color);
+        tv_title = (TextView) head_view.findViewById(R.id.tv_title);
         tv_title.setGravity(Gravity.CENTER);
         tv_title.setText("中间的标题");
-        tv_title.setTextSize(16);
-        head_view.addView(tv_title);
+        tv_title.setTextSize(18);
+        tv_title.setTextColor(Color.WHITE);
 
         //添加右边的按钮
-        tv_right = new TextView(this);
-        LinearLayout.LayoutParams btnRightLayoutParams = new LinearLayout.LayoutParams(dip2px(this, 44), LinearLayout.LayoutParams.MATCH_PARENT);
-        tv_right.setLayoutParams(btnRightLayoutParams);
-        tv_right.setBackgroundColor(color);
-        tv_right.setGravity(Gravity.CENTER);
-        tv_right.setPadding(dip2px(this, 10), dip2px(this, 10), dip2px(this, 10), dip2px(this, 10));
+        tv_right = (TextView) head_view.findViewById(R.id.tv_right);
         Drawable drawableRight = ContextCompat.getDrawable(this, RightDrawable);
         assert drawableRight != null;
         drawableRight.setBounds(0, 0, dip2px(this, 30), dip2px(this, 30));//第一0是距左边距离，第二0是距上边距离，40分别是长宽
-        tv_right.setCompoundDrawables(null, drawableRight, null, null);//只放上边
-        head_view.addView(tv_right);
+//        tv_right.setCompoundDrawables(null, drawableRight, null, null);//只放上边
+
 
         //从外面传来的View添加进入
-        inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         LinearLayout.LayoutParams viewLayoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT, 1.0f);
         contentView = (ViewGroup) inflater.inflate(getContentView(), content, false);
         contentView.setLayoutParams(viewLayoutParams);
@@ -502,36 +481,27 @@ public abstract class BaseActivity extends FragmentActivity implements View.OnCl
     /**
      * 判断是否铺满全屏
      */
-    public void setFullScreen(boolean fullScreen) {
-        if (fullScreen) {
-            requestWindowFeature(Window.FEATURE_NO_TITLE);
-            getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                    WindowManager.LayoutParams.FLAG_FULLSCREEN);
-            getWindow().setBackgroundDrawable(null);
-        } else {
-            requestWindowFeature(Window.FEATURE_NO_TITLE);
+    public void setFullScreen() {
 
-            requestWindowFeature(Window.FEATURE_NO_TITLE);
-            Window window = this.getWindow();
-            //设置透明状态栏,这样才能让 ContentView 向上
-            window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        Window window = this.getWindow();
+        //设置透明状态栏,这样才能让 ContentView 向上
+        window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
 
-            //需要设置这个 flag 才能调用 setStatusBarColor 来设置状态栏颜色
-            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            //设置状态栏颜色
+        //需要设置这个 flag 才能调用 setStatusBarColor 来设置状态栏颜色
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        //设置状态栏颜色
 //            window.setStatusBarColor(statusColor);
 
-            ViewGroup mContentView = (ViewGroup) this.findViewById(Window.ID_ANDROID_CONTENT);
-            View mChildView = mContentView.getChildAt(0);
-            if (mChildView != null) {
-                //注意不是设置 ContentView 的 FitsSystemWindows, 而是设置 ContentView 的第一个子 View . 使其不为系统 View 预留空间.
-                ViewCompat.setFitsSystemWindows(mChildView, false);
-            }
-
-
-            this.getWindow().setBackgroundDrawable(null);
-
+        ViewGroup mContentView = (ViewGroup) this.findViewById(Window.ID_ANDROID_CONTENT);
+        View mChildView = mContentView.getChildAt(0);
+        if (mChildView != null) {
+            //注意不是设置 ContentView 的 FitsSystemWindows, 而是设置 ContentView 的第一个子 View . 使其不为系统 View 预留空间.
+            ViewCompat.setFitsSystemWindows(mChildView, false);
         }
+
+
+        this.getWindow().setBackgroundDrawable(null);
     }
 
 

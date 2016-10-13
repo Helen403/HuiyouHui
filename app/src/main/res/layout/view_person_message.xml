@@ -192,6 +192,7 @@
             android:background="#fff" />
 
         <RelativeLayout
+            android:id="@+id/rl_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#E82418">
@@ -366,7 +367,7 @@
     </LinearLayout>
 
     <ImageView
-        android:id="@+id/iv_5"
+        android:id="@+id/person_iv_5"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </LinearLayout>
