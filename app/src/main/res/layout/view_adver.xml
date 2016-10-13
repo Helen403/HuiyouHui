@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color_transparent"
+    android:gravity="center"
+    android:id="@+id/ll"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#fff">
+
+
+        <TextView
+            android:id="@+id/tv_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:text="红包揽客积分退还通知"
+            android:textColor="#B0B0B0" />
+
+        <TextView
+            android:id="@+id/tv_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_1"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:text="退还积分 :"
+            android:textColor="#B0B0B0" />
+
+        <TextView
+            android:id="@+id/tv_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_1"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/tv_2"
+            android:paddingTop="15dp"
+            android:text="12"
+            android:textColor="#E59793" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_1"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@id/tv_3"
+            android:paddingTop="15dp"
+            android:text="积分"
+            android:textSize="15sp" />
+
+
+        <TextView
+            android:id="@+id/tv_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_2"
+            android:layout_marginLeft="15sp"
+            android:layout_marginTop="6dp"
+            android:text="退回方式 :"
+            android:textColor="#B0B0B0" />
+
+        <TextView
+            android:id="@+id/tv_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@id/tv_4"
+            android:text="积分账户" />
+
+
+        <TextView
+            android:id="@+id/tv_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_4"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="6dp"
+            android:text="到账时间 :"
+            android:textColor="#B0B0B0" />
+
+        <TextView
+            android:id="@+id/tv_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_4"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@+id/tv_6"
+            android:text="2016-08-25 13:06:03" />
+
+        <TextView
+            android:id="@+id/tv_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_6"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="6dp"
+            android:text="退回原因 :"
+            android:textColor="#B0B0B0" />
+
+        <TextView
+            android:id="@+id/tv_9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_6"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@id/tv_6"
+            android:text="超过24小时没有被领取" />
+
+        <TextView
+            android:id="@+id/tv_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tv_9"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="30dp"
+
+
+            android:text="系统通知"
+            android:textColor="#B0B0B0" />
+
+        <TextView
+            android:id="@+id/tv_11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tv_10"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="22dp"
+            android:layout_marginTop="5dp"
+            android:text="2016-10-11"
+            android:textColor="#B0B0B0" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

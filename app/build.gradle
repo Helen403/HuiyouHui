@@ -1,0 +1,44 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.0"
+
+    defaultConfig {
+        applicationId "com.huiyouhui"
+        minSdkVersion 15
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:24.0.0'
+    compile 'com.android.support:design:24.0.0'
+    compile files('libs/gson-2.2.1.jar')
+    compile files('libs/TwoDimensionCode/zxing.jar')
+    compile files('libs/Share/MobCommons-2016.0830.1940.jar')
+    compile files('libs/Share/MobTools-2016.0830.1940.jar')
+    compile files('libs/Share/ShareSDK-Core-2.7.7.jar')
+    compile files('libs/Share/ShareSDK-QQ-2.7.7.jar')
+    compile files('libs/Share/ShareSDK-SinaWeibo-2.7.7.jar')
+    compile files('libs/Share/ShareSDK-Wechat-2.7.7.jar')
+    compile files('libs/Share/ShareSDK-Wechat-Core-2.7.7.jar')
+    compile files('libs/Share/ShareSDK-Wechat-Moments-2.7.7.jar')
+    compile files('libs/BaiduMap/baidumapapi_base_v4_0_0.jar')
+    compile files('libs/BaiduMap/baidumapapi_cloud_v4_0_0.jar')
+    compile files('libs/BaiduMap/baidumapapi_map_v4_0_0.jar')
+    compile files('libs/BaiduMap/baidumapapi_radar_v4_0_0.jar')
+    compile files('libs/BaiduMap/baidumapapi_search_v4_0_0.jar')
+    compile files('libs/BaiduMap/baidumapapi_util_v4_0_0.jar')
+    compile files('libs/BaiduMap/locSDK_6.23.jar')
+}
