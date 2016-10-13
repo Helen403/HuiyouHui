@@ -12,6 +12,7 @@ import com.huiyouhui.activity.ApplyCashActivity;
 import com.huiyouhui.activity.CashActivity;
 import com.huiyouhui.activity.IntegralActivity;
 import com.huiyouhui.activity.RechargeActivity;
+import com.huiyouhui.activity.WithdrawalsAccountActivity;
 import com.huiyouhui.lib.base.BaseView;
 import com.huiyouhui.lib.custemview.CircleImageView;
 
@@ -38,6 +39,7 @@ public class PersonMessageView extends BaseView {
     LinearLayout ll2;
     RelativeLayout rl1;
     RelativeLayout rl2;
+    RelativeLayout rl3;
 
 
     public PersonMessageView(Context context) {
@@ -69,6 +71,7 @@ public class PersonMessageView extends BaseView {
         personIv5 = (ImageView) findViewById(R.id.person_iv_5);
         rl1 = (RelativeLayout) findViewById(R.id.rl_1);
         rl2 = (RelativeLayout) findViewById(R.id.rl_2);
+        rl3 = (RelativeLayout) findViewById(R.id.rl_3);
     }
 
     @Override
@@ -78,7 +81,7 @@ public class PersonMessageView extends BaseView {
 
     @Override
     public void setListeners() {
-        setOnListeners(icon, ll1, ll2, rl1,rl2);
+        setOnListeners(icon, ll1, ll2, rl1,rl2,rl3);
         setOnClick(new onClick() {
             @Override
             public void onClick(View v, int id) {
@@ -108,6 +111,10 @@ public class PersonMessageView extends BaseView {
                     //申请提现
                     case R.id.rl_2:
                         goToActivityByClass(getContext(), ApplyCashActivity.class);
+                        break;
+                    //提现帐号
+                    case R.id.rl_3:
+                        goToActivityByClass(getContext(), WithdrawalsAccountActivity.class);
                         break;
                 }
             }

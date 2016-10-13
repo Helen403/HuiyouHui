@@ -60,6 +60,7 @@ public class ApplyCashActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
 
+                goToActivityByClass(ApplyCashActivity.this, WithdrawalsActivity.class);
             }
         });
         setOnListeners(tv12);

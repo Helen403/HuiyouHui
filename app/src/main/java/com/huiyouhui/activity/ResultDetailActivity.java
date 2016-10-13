@@ -39,6 +39,7 @@ public class ResultDetailActivity extends BaseActivity {
 
     @Override
     public void findViews() {
+        setTitle("结果详情");
         tv1 = (TextView) findViewById(R.id.tv_1);
         ll1 = (LinearLayout) findViewById(R.id.ll1);
         iv1 = (ImageView) findViewById(R.id.iv_1);
@@ -65,6 +66,17 @@ public class ResultDetailActivity extends BaseActivity {
 
     @Override
     public void setListeners() {
-
+        setOnListeners(tv12);
+        setOnClick(new onClick() {
+            @Override
+            public void onClick(View v, int id) {
+                switch (id) {
+                    //点击完成
+                    case R.id.tv_12:
+                        finish();
+                        break;
+                }
+            }
+        });
     }
 }

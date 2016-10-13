@@ -61,6 +61,9 @@
         <activity android:name=".activity.CashActivity"/>
         <activity android:name=".activity.RechargeActivity"/>
         <activity android:name=".activity.ApplyCashActivity"/>
+        <activity android:name=".activity.ResultDetailActivity"/>
+        <activity android:name=".activity.WithdrawalsActivity"/>
+        <activity android:name=".activity.WithdrawalsAccountActivity"/>
 
     </application>
 
