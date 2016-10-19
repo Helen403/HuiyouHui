@@ -40,6 +40,12 @@ public class ExchangeVerificationActivity extends BaseActivity {
 
     @Override
     public void setListeners() {
+        getRightBtn().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToActivityByClass(ExchangeVerificationActivity.this, ExchangeRecordActivity.class);
+            }
+        });
 
         setOnListeners(tv12);
         setOnClick(new onClick() {
