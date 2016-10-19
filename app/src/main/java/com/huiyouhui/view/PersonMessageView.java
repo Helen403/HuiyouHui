@@ -11,6 +11,7 @@ import com.huiyouhui.R;
 import com.huiyouhui.activity.ApplyCashActivity;
 import com.huiyouhui.activity.CashActivity;
 import com.huiyouhui.activity.IntegralActivity;
+import com.huiyouhui.activity.PasswordActivity;
 import com.huiyouhui.activity.RechargeActivity;
 import com.huiyouhui.activity.WithdrawalsAccountActivity;
 import com.huiyouhui.lib.base.BaseView;
@@ -40,6 +41,7 @@ public class PersonMessageView extends BaseView {
     RelativeLayout rl1;
     RelativeLayout rl2;
     RelativeLayout rl3;
+    RelativeLayout rl4;
 
 
     public PersonMessageView(Context context) {
@@ -72,6 +74,7 @@ public class PersonMessageView extends BaseView {
         rl1 = (RelativeLayout) findViewById(R.id.rl_1);
         rl2 = (RelativeLayout) findViewById(R.id.rl_2);
         rl3 = (RelativeLayout) findViewById(R.id.rl_3);
+        rl4 = (RelativeLayout) findViewById(R.id.rl_4);
     }
 
     @Override
@@ -81,7 +84,7 @@ public class PersonMessageView extends BaseView {
 
     @Override
     public void setListeners() {
-        setOnListeners(icon, ll1, ll2, rl1,rl2,rl3);
+        setOnListeners(icon, ll1, ll2, rl1,rl2,rl3,rl4);
         setOnClick(new onClick() {
             @Override
             public void onClick(View v, int id) {
@@ -116,6 +119,14 @@ public class PersonMessageView extends BaseView {
                     case R.id.rl_3:
                         goToActivityByClass(getContext(), WithdrawalsAccountActivity.class);
                         break;
+
+
+                    //密码设置
+                    case R.id.rl_4:
+                        goToActivityByClass(getContext(), PasswordActivity.class);
+                        break;
+
+
                 }
             }
         });

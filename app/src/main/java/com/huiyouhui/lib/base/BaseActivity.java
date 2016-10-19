@@ -267,7 +267,7 @@ public abstract class BaseActivity extends FragmentActivity implements View.OnCl
 
         //创建一个头部View 高度为44
         inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        head_view = (RelativeLayout) inflater.inflate(R.layout.custermview_head_view,ly_content,false);
+        head_view = (RelativeLayout) inflater.inflate(R.layout.custermview_head_view, ly_content, false);
         head_view.setBackgroundColor(color);
         ly_content.addView(head_view);
 
@@ -291,6 +291,8 @@ public abstract class BaseActivity extends FragmentActivity implements View.OnCl
         assert drawableRight != null;
         drawableRight.setBounds(0, 0, dip2px(this, 30), dip2px(this, 30));//第一0是距左边距离，第二0是距上边距离，40分别是长宽
 //        tv_right.setCompoundDrawables(null, drawableRight, null, null);//只放上边
+
+        tv_right.setTextColor(Color.WHITE);
 
 
         //从外面传来的View添加进入

@@ -64,6 +64,11 @@
         <activity android:name=".activity.ResultDetailActivity"/>
         <activity android:name=".activity.WithdrawalsActivity"/>
         <activity android:name=".activity.WithdrawalsAccountActivity"/>
+        <activity android:name=".activity.PasswordActivity"/>
+        <activity android:name=".activity.GiveIntegralRecordActivity"/>
+        <activity android:name=".activity.ExchangeVerificationActivity"/>
+        <activity android:name=".activity.ExchangeDetailsActivity"/>
+        <activity android:name=".activity.GiveIntegralActivity"/>
 
     </application>
 

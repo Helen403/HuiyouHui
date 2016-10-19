@@ -12,6 +12,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.huiyouhui.R;
+import com.huiyouhui.activity.ExchangeVerificationActivity;
+import com.huiyouhui.activity.GiveIntegralActivity;
 import com.huiyouhui.adapter.JDViewAdapter;
 import com.huiyouhui.adapter.ShopAdapter;
 import com.huiyouhui.bean.AdverNotice;
@@ -61,6 +63,13 @@ public class ShopFragment extends BaseFragment {
     TextView sure, cancel;
 
     /****************************************/
+    //头像下面四个按钮
+    TextView tv1;
+    TextView tv2;
+    TextView tv3;
+    TextView tv4;
+
+    /****************************************/
     @Override
     public void dealLogicBeforeFindView() {
     }
@@ -76,6 +85,10 @@ public class ShopFragment extends BaseFragment {
         tbView = (JDAdverView) contentView.findViewById(R.id.jdadver);
         myGridView = (MyGridView) contentView.findViewById(R.id.mygridview);
         ll = (LinearLayout) contentView.findViewById(R.id.ll);
+        tv1 = (TextView) contentView.findViewById(R.id.tv_1);
+        tv2 = (TextView) contentView.findViewById(R.id.tv_2);
+        tv3 = (TextView) contentView.findViewById(R.id.tv_3);
+        tv4 = (TextView) contentView.findViewById(R.id.tv_4);
     }
 
     @Override
@@ -133,7 +146,6 @@ public class ShopFragment extends BaseFragment {
         exit = (TextView) personMessageView.findViewById(R.id.exit);
 
 
-
         /****************************************/
         //退出AppView
         exitAppView = new ExitAppView(getActivity());
@@ -147,7 +159,7 @@ public class ShopFragment extends BaseFragment {
 
     @Override
     public void setListeners() {
-        setOnListeners(ll, icon, exit, cancel, sure,personMessageView.personIv5);
+        setOnListeners(ll, icon, exit, cancel, sure, personMessageView.personIv5, tv1, tv2, tv3, tv4);
         setOnClick(new onClick() {
             @Override
             public void onClick(View v, int id) {
@@ -166,10 +178,10 @@ public class ShopFragment extends BaseFragment {
                         //参数7～8：x轴的结束位置
                         TranslateAnimation translateAnimationOpen =
                                 new TranslateAnimation(
-                                        Animation.RELATIVE_TO_SELF,-1f,
-                                        Animation.RELATIVE_TO_SELF,0f,
-                                        Animation.RELATIVE_TO_SELF,0f,
-                                        Animation.RELATIVE_TO_SELF,0f);
+                                        Animation.RELATIVE_TO_SELF, -1f,
+                                        Animation.RELATIVE_TO_SELF, 0f,
+                                        Animation.RELATIVE_TO_SELF, 0f,
+                                        Animation.RELATIVE_TO_SELF, 0f);
                         translateAnimationOpen.setDuration(AnimTime);
                         animationSetPersonOpen.addAnimation(translateAnimationOpen);
 
@@ -177,7 +189,7 @@ public class ShopFragment extends BaseFragment {
                         /**************************************/
                         mashView.setVisibility(View.VISIBLE);
                         AnimationSet animationSetMash = new AnimationSet(true);
-                        AlphaAnimation AlphaOpen=new AlphaAnimation(0f, 1.f);
+                        AlphaAnimation AlphaOpen = new AlphaAnimation(0f, 1.f);
                         AlphaOpen.setDuration(AnimTime);
                         animationSetMash.addAnimation(AlphaOpen);
                         mashView.startAnimation(animationSetMash);
@@ -191,17 +203,17 @@ public class ShopFragment extends BaseFragment {
                         //参数7～8：x轴的结束位置
                         TranslateAnimation translateAnimationClose =
                                 new TranslateAnimation(
-                                        Animation.RELATIVE_TO_SELF,0f,
-                                        Animation.RELATIVE_TO_SELF,-1f,
-                                        Animation.RELATIVE_TO_SELF,0f,
-                                        Animation.RELATIVE_TO_SELF,0f);
+                                        Animation.RELATIVE_TO_SELF, 0f,
+                                        Animation.RELATIVE_TO_SELF, -1f,
+                                        Animation.RELATIVE_TO_SELF, 0f,
+                                        Animation.RELATIVE_TO_SELF, 0f);
                         translateAnimationClose.setDuration(AnimTime);
                         animationSetPersonClose.addAnimation(translateAnimationClose);
 
                         personMessageView.startAnimation(animationSetPersonClose);
                         /**************************************/
                         AnimationSet animationSetMashClose = new AnimationSet(true);
-                        AlphaAnimation Alpha=new AlphaAnimation(1.f, 0f);
+                        AlphaAnimation Alpha = new AlphaAnimation(1.f, 0f);
                         Alpha.setDuration(AnimTime);
                         animationSetMashClose.addAnimation(Alpha);
                         mashView.startAnimation(animationSetMashClose);
@@ -227,6 +239,24 @@ public class ShopFragment extends BaseFragment {
                     case R.id.sure:
                         activity.finish();
                         break;
+
+                    //赠送积分
+                    case R.id.tv_1:
+                        goToActivityByClass(getActivity(), GiveIntegralActivity.class);
+                        break;
+                    //兑换验证
+                    case R.id.tv_2:
+                        goToActivityByClass(getActivity(), ExchangeVerificationActivity.class);
+                        break;
+                    //扫一扫
+                    case R.id.tv_3:
+                        goToActivityByClass(getActivity(), ExchangeVerificationActivity.class);
+                        break;
+                    //收款
+                    case R.id.tv_4:
+                        goToActivityByClass(getActivity(), ExchangeVerificationActivity.class);
+                        break;
+
                 }
             }
         });
