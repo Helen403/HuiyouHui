@@ -42,10 +42,29 @@ public class CashActivity extends BaseActivity {
     public void initData() {
 
         MyRecycleView();
+
+
+//        Param param = new Param();
+//        param.put("pid",123);
+//        ControlUtils.postsEveryTime("http://hyh2.281.com.cn/api.php/home/address/findtown", param, asdas.class, new ControlUtils.OnControlUtils<asdas>() {
+//            @Override
+//            public void onSuccess(String url, asdas asdas, ArrayList<asdas> list, String result, JSONObject jsonObject, JSONArray jsonArray) {
+//
+//            }
+//
+//            @Override
+//            public void onFailure(String url) {
+//
+//            }
+//        });
+
     }
 
     @Override
     public void setListeners() {
+
+
+
     }
 
 
@@ -80,4 +99,7 @@ public class CashActivity extends BaseActivity {
             }
         });
     }
+
+
+
 }

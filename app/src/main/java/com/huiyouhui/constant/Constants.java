@@ -10,7 +10,14 @@ public interface Constants {
      * 海龙
      */
     interface Helen {
-        final String location = "http://member.ahjmall.com/cloud/get_region_by_location.json/query?location=%s,%s";
+         String location = "http://member.ahjmall.com/cloud/get_region_by_location.json/query?location=%s,%s";
+    }
+
+    /**
+     * 宋
+     */
+    interface Song{
+
     }
 
     /******************************************************************************************/
@@ -22,6 +29,7 @@ public interface Constants {
      */
     String[] JSON = new String[]{
             "http://www.ahjmall.com/cloud/get_product_group_v3.json"
+
     };
 
     /**
@@ -31,6 +39,7 @@ public interface Constants {
      */
     String[] BITMAP = new String[]{
            "http://mmbiz.qpic.cn/mmbiz_jpg/X2Vhfqvibrba9EAlvv5ZMwlgnA5diaGQE6kPgVwpltLQDrdxnYtuXbJvJovQErq9CQC94vFaF4Q2MPR3ib7aiagZ1g/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1"
+
     };
 
 
