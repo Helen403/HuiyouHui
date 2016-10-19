@@ -70,6 +70,7 @@
         <activity android:name=".activity.ExchangeDetailsActivity"/>
         <activity android:name=".activity.GiveIntegralActivity"/>
         <activity android:name=".activity.ExchangeRecordActivity"/>
+        <activity android:name=".activity.RedActivity"/>
 
     </application>
 

@@ -70,9 +70,6 @@ public class ShopFragment extends BaseFragment {
     TextView tv4;
 
     /****************************************/
-    @Override
-    public void dealLogicBeforeFindView() {
-    }
 
     @Override
     public int getContentView() {

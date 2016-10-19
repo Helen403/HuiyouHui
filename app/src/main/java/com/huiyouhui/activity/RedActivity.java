@@ -1,8 +1,8 @@
 package com.huiyouhui.activity;
 
 import com.huiyouhui.R;
-import com.huiyouhui.adapter.ExchangeRecordAdapter;
-import com.huiyouhui.bean.ExchangeRecordBean;
+import com.huiyouhui.adapter.RedAdapter;
+import com.huiyouhui.bean.RedBean;
 import com.huiyouhui.lib.MyRecycleView.MyLinearLayoutManager;
 import com.huiyouhui.lib.base.BaseActivity;
 import com.huiyouhui.lib.base.MyBaseRecycleAdapter;
@@ -13,26 +13,25 @@ import java.util.ArrayList;
 /**
  * Created by Administrator on 2016/10/19.
  */
-public class ExchangeRecordActivity extends BaseActivity {
-
+public class RedActivity extends BaseActivity {
 
     MyRecycleView myRecycleView;
-    ExchangeRecordAdapter exchangeRecordAdapter;
+    RedAdapter redAdapter;
 
     @Override
     public int getContentView() {
-        return R.layout.activity_exchange_record;
+        return R.layout.activity_red;
     }
 
     @Override
     public void findViews() {
-        setTitle("兑换记录");
         myRecycleView = (MyRecycleView) findViewById(R.id.myrecycleview);
     }
 
+
     @Override
     public void initData() {
-        MyRecycleView();
+
     }
 
     @Override
@@ -40,35 +39,40 @@ public class ExchangeRecordActivity extends BaseActivity {
 
     }
 
-
-    private void MyRecycleView() {
+    @Override
+    protected void onAttachMyRecycleViewAdapter() {
+        super.onAttachMyRecycleViewAdapter();
         // 使用重写后的线性布局管理器
         MyLinearLayoutManager manager = new MyLinearLayoutManager(this);
         myRecycleView.setLayoutManager(manager);
 
-        exchangeRecordAdapter = new ExchangeRecordAdapter(this, myRecycleView);
-        myRecycleView.setAdapter(exchangeRecordAdapter);
+        redAdapter = new RedAdapter(this, myRecycleView);
+        myRecycleView.setAdapter(redAdapter);
         // 刷新
         myRecycleView.setRefresh(true);
 
-        exchangeRecordAdapter.setOnRefresh(new MyBaseRecycleAdapter.OnRefresh() {
+        redAdapter.setOnRefresh(new MyBaseRecycleAdapter.OnRefresh() {
             @Override
             public void onRefresh() {
-                ArrayList<ExchangeRecordBean> data = new ArrayList<ExchangeRecordBean>();
+                ArrayList<RedBean> data = new ArrayList<RedBean>();
                 for (int i = 0; i < 5; i++) {
-                    data.add(new ExchangeRecordBean());
+                    data.add(new RedBean());
                 }
-                exchangeRecordAdapter.setRefresh(data);
+                redAdapter.setRefresh(data);
             }
 
             @Override
             public void onAddData() {
-                ArrayList<ExchangeRecordBean> data = new ArrayList<ExchangeRecordBean>();
+                ArrayList<RedBean> data = new ArrayList<RedBean>();
                 for (int i = 0; i < 1; i++) {
-                    data.add(new ExchangeRecordBean());
+                    data.add(new RedBean());
                 }
-                exchangeRecordAdapter.setAddData(data);
+                redAdapter.setAddData(data);
             }
         });
+
+
     }
+
+
 }

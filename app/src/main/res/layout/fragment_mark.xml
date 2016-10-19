@@ -2,20 +2,125 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#f5f5f5"
     android:orientation="vertical">
 
 
-    <com.huiyouhui.lib.custemview.BounceScrollView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#fff">
+        android:layout_height="44dp"
+        android:background="@color/bg_color">
+
+        <com.huiyouhui.lib.custemview.CircleImageView
+            android:id="@+id/icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/head_merchants" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="拉我看一下" />
+            android:layout_centerInParent="true"
+            android:text="营销管理"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
 
+        <RelativeLayout
+            android:id="@+id/rl1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:gravity="center_horizontal"
+            android:padding="10dp">
 
-    </com.huiyouhui.lib.custemview.BounceScrollView>
+            <ImageView
+                android:id="@+id/iv_1"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/tv_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_1"
+                android:layout_marginTop="10dp"
+                android:text="红包管理" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:id="@+id/rl2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:gravity="center_horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/iv_2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/tv_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_2"
+                android:layout_marginTop="10dp"
+                android:text="卡卷管理" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:id="@+id/rl3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:gravity="center_horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/iv_3"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/tv_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_3"
+                android:layout_marginTop="10dp"
+                android:text="超值兑换" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
 </LinearLayout>
