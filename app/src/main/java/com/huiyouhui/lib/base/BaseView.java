@@ -21,6 +21,7 @@ public abstract class BaseView extends RelativeLayout implements View.OnClickLis
         findViews();
         initData();
         setListeners();
+
     }
 
     public abstract int getContentView();

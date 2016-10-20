@@ -13,16 +13,17 @@ import com.huiyouhui.lib.base.BaseView;
 public class ExitAppView extends BaseView {
 
     RelativeLayout relativeLayout;
+
     public ExitAppView(Context context) {
         super(context);
     }
-
 
 
     @Override
     public int getContentView() {
         return R.layout.view_exit_app;
     }
+
     @Override
     public void findViews() {
         relativeLayout = (RelativeLayout) view.findViewById(R.id.rl_exit);
@@ -33,13 +34,14 @@ public class ExitAppView extends BaseView {
     public void initData() {
 
     }
+
     @Override
     public void setListeners() {
         setOnListeners(relativeLayout);
         setOnClick(new onClick() {
             @Override
             public void onClick(View v, int id) {
-                switch (id){
+                switch (id) {
                     case R.id.rl_exit:
                         view.setVisibility(GONE);
                         break;

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:orientation="vertical">
+
+    <!--<RadioGroup-->
+    <!--android:id="@+id/Rg_1"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="48dip"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<RadioButton-->
+    <!--android:id="@+id/rb_1"-->
+    <!--android:layout_width="0dip"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1"-->
+    <!--android:button="@null"-->
+    <!--android:checked="true"-->
+    <!--android:gravity="center"-->
+    <!--android:text="全部"-->
+    <!--/>-->
+
+    <!--<RadioButton-->
+    <!--android:id="@+id/rb_2"-->
+    <!--android:layout_width="0dip"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1"-->
+    <!--android:button="@null"-->
+    <!--android:gravity="center"-->
+    <!--android:text="已上架"-->
+    <!--/>-->
+
+    <!--<RadioButton-->
+    <!--android:id="@+id/rb_3"-->
+    <!--android:layout_width="0dip"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1"-->
+    <!--android:button="@null"-->
+    <!--android:gravity="center"-->
+    <!--android:text="已下架"-->
+    <!--/>-->
+
+    <!--<RadioButton-->
+    <!--android:id="@+id/rb_4"-->
+    <!--android:layout_width="0dip"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1"-->
+    <!--android:button="@null"-->
+    <!--android:gravity="center"-->
+    <!--android:text="待审核"-->
+    <!--/>-->
+
+    <!--</RadioGroup>-->
+    <com.huiyouhui.view.SlidingTab
+        android:id="@+id/slidingTab"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#fff"
+
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:text="请稍候..."
+            android:textColor="#949494" />
+
+        <com.huiyouhui.lib.custemview.MyRecycleView
+            android:id="@+id/recycleview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

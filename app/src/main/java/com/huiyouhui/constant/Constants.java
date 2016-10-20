@@ -10,14 +10,19 @@ public interface Constants {
      * 海龙
      */
     interface Helen {
-         String location = "http://member.ahjmall.com/cloud/get_region_by_location.json/query?location=%s,%s";
+        String location = "http://member.ahjmall.com/cloud/get_region_by_location.json/query?location=%s,%s";
     }
 
     /**
      * 宋
      */
-    interface Song{
-
+    interface Song {
+        /**
+         * 当前订单状态：已上架，已下架，审核中
+         */
+        int Order_State_up = 0;
+        int Order_State_down = 1;
+        int Order_State_Loding = 2;
     }
 
     /******************************************************************************************/
@@ -38,7 +43,7 @@ public interface Constants {
      * 只会加载一次
      */
     String[] BITMAP = new String[]{
-           "http://mmbiz.qpic.cn/mmbiz_jpg/X2Vhfqvibrba9EAlvv5ZMwlgnA5diaGQE6kPgVwpltLQDrdxnYtuXbJvJovQErq9CQC94vFaF4Q2MPR3ib7aiagZ1g/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1"
+            "http://mmbiz.qpic.cn/mmbiz_jpg/X2Vhfqvibrba9EAlvv5ZMwlgnA5diaGQE6kPgVwpltLQDrdxnYtuXbJvJovQErq9CQC94vFaF4Q2MPR3ib7aiagZ1g/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1"
 
     };
 
