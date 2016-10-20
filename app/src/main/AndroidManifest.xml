@@ -71,7 +71,9 @@
         <activity android:name=".activity.RedActivity" />
         <activity android:name=".activity.RedDetailActivity" />
         <activity android:name=".activity.SetRedActivity" />
-        <activity android:name=".activity.CardManagerActivity"/>
+        <activity android:name=".activity.CardManagerActivity" />
+        <activity android:name=".activity.CardDetailActivity" />
+        <activity android:name=".activity.SuperValueShopActivity" />
 
     </application>
 

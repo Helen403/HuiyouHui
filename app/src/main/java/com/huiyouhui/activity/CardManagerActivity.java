@@ -1,5 +1,7 @@
 package com.huiyouhui.activity;
 
+import android.view.View;
+
 import com.huiyouhui.R;
 import com.huiyouhui.adapter.CardManagerAdapter;
 import com.huiyouhui.bean.CardManagerBean;
@@ -68,6 +70,13 @@ public class CardManagerActivity extends BaseActivity {
                     data.add(new CardManagerBean());
                 }
                 cardManagerAdapter.setAddData(data);
+            }
+        });
+
+        cardManagerAdapter.setOnItemClickListener(new MyBaseRecycleAdapter.OnItemClickListener<CardManagerBean>() {
+            @Override
+            public void onItemClick(View view, int position, CardManagerBean cardManagerBean) {
+                goToActivityByClass(CardManagerActivity.this, CardDetailActivity.class);
             }
         });
 
