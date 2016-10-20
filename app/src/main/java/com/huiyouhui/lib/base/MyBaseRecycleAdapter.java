@@ -30,7 +30,7 @@ public abstract class MyBaseRecycleAdapter<T> extends RecyclerView.Adapter<MyBas
     private Context contextApplication = BaseApplication.context;
     private ArrayList<T> data;
     private MyRecycleView mRecyclerView;
-    private Context context;
+    public Context context;
 
 
     private OnItemClickListener<T> mListener;

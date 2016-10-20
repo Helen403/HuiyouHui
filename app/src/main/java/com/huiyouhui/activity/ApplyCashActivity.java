@@ -24,7 +24,6 @@ public class ApplyCashActivity extends BaseActivity {
     private EditText edit;
     private TextView tv12;
 
-
     @Override
     public int getContentView() {
         return R.layout.activity_apply_cash;

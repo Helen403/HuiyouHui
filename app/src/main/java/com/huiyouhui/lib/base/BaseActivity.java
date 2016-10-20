@@ -187,7 +187,7 @@ public abstract class BaseActivity extends FragmentActivity implements View.OnCl
         getBuildContentView();
         onShowMessage(content);
         setContentView(content);
-        onAttachMyRecycleViewAdapter();
+
         setBack();
         //注册广播
         setBroadCastFinish();
@@ -242,6 +242,7 @@ public abstract class BaseActivity extends FragmentActivity implements View.OnCl
             onFragmentChange(0);
             initData();
             setListeners();
+            onAttachMyRecycleViewAdapter();
         } else {
             myNetFailView.setVisibility(View.VISIBLE);
         }

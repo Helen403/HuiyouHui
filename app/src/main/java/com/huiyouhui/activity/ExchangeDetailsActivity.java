@@ -65,8 +65,6 @@ public class ExchangeDetailsActivity extends BaseActivity {
 
         exchangeDetailView.setVisibility(View.GONE);
         relativeLayout.addView(exchangeDetailView);
-
-
     }
 
     @Override
