@@ -32,7 +32,8 @@ public class ShopAdapter extends MyBaseAdapter<ShopBean> {
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-             goToActivityByClass(ProjectFactroy.getClazzByModelName(shopBean.title));            }
+                goToActivityByClass(ProjectFactroy.getClazzByModelName(shopBean.title));
+            }
         });
     }
 }

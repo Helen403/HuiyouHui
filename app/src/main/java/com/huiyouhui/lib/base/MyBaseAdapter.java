@@ -52,7 +52,7 @@ public abstract class MyBaseAdapter<T> extends BaseAdapter implements View.OnCli
      * 设置数据
      */
     public void setData(List<T> data) {
-        if (data!=null){
+        if (data != null) {
             this.data.clear();
             this.data.addAll(data);
             notifyDataSetChanged();
@@ -69,7 +69,7 @@ public abstract class MyBaseAdapter<T> extends BaseAdapter implements View.OnCli
             notifyDataSetChanged();
         }
     }
-    
+
     /**
      * 清除数据
      */
@@ -222,7 +222,7 @@ public abstract class MyBaseAdapter<T> extends BaseAdapter implements View.OnCli
     /**
      * 跳转到另一个Activity，不携带数据，不设置flag
      */
-    public void goToActivityByClass( Class<?> cls) {
+    public void goToActivityByClass(Class<?> cls) {
         Intent intent = new Intent();
         intent.setClass(context, cls);
         context.startActivity(intent);
@@ -231,7 +231,7 @@ public abstract class MyBaseAdapter<T> extends BaseAdapter implements View.OnCli
     /**
      * 跳转到另一个Activity，携带数据
      */
-    public void goToActivityByClass( Class<?> cls, Bundle bundle) {
+    public void goToActivityByClass(Class<?> cls, Bundle bundle) {
         Intent intent = new Intent();
         intent.setClass(context, cls);
         intent.putExtras(bundle);
@@ -242,7 +242,7 @@ public abstract class MyBaseAdapter<T> extends BaseAdapter implements View.OnCli
     /**
      * 延迟去往新的Activity
      */
-    public void delayToActivity( final Class<?> cls, long delay) {
+    public void delayToActivity(final Class<?> cls, long delay) {
         Timer timer = new Timer();
         timer.schedule(new TimerTask() {
             @Override

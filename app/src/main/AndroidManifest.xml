@@ -77,6 +77,9 @@
         <activity android:name=".activity.SetSuperValueActvity" />
         <activity android:name=".activity.ChoiceShopActivity" />
         <activity android:name=".activity.SetCardActivity" />
+        <activity android:name=".activity.ProductManagerActivity" />
+        <activity android:name=".activity.FinanceActivity" />
+        <activity android:name=".activity.ShopSettingActivity"/>
 
 
     </application>
