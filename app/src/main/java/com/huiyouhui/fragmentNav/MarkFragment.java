@@ -7,6 +7,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.huiyouhui.R;
+import com.huiyouhui.activity.CardManagerActivity;
 import com.huiyouhui.activity.RedActivity;
 import com.huiyouhui.lib.base.BaseFragment;
 import com.huiyouhui.lib.custemview.CircleImageView;
@@ -69,7 +70,7 @@ public class MarkFragment extends BaseFragment {
                         break;
                     //卡卷管理
                     case R.id.rl2:
-
+                        goToActivityByClass(getActivity(), CardManagerActivity.class);
                         break;
                     //超值兑换
                     case R.id.rl3:

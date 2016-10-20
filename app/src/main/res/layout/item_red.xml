@@ -40,6 +40,30 @@
             android:textSize="16sp" />
 
 
+        <TextView
+            android:id="@+id/tv_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="25dp"
+            android:text="200积分"
+            android:textColor="#D7BD82"
+            android:textSize="16sp" />
+
+
+        <TextView
+            android:id="@+id/tv_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tv_3"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:text="已领150/200" />
+
+
     </RelativeLayout>
 
     <View

@@ -35,8 +35,6 @@
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
 
 
-
-
     <application
 
         android:name=".lib.base.BaseApplication"
@@ -56,21 +54,24 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".lib.activityMain.MainActivity"/>
-        <activity android:name=".activity.IntegralActivity"/>
-        <activity android:name=".activity.CashActivity"/>
-        <activity android:name=".activity.RechargeActivity"/>
-        <activity android:name=".activity.ApplyCashActivity"/>
-        <activity android:name=".activity.ResultDetailActivity"/>
-        <activity android:name=".activity.WithdrawalsActivity"/>
-        <activity android:name=".activity.WithdrawalsAccountActivity"/>
-        <activity android:name=".activity.PasswordActivity"/>
-        <activity android:name=".activity.GiveIntegralRecordActivity"/>
-        <activity android:name=".activity.ExchangeVerificationActivity"/>
-        <activity android:name=".activity.ExchangeDetailsActivity"/>
-        <activity android:name=".activity.GiveIntegralActivity"/>
-        <activity android:name=".activity.ExchangeRecordActivity"/>
-        <activity android:name=".activity.RedActivity"/>
+        <activity android:name=".lib.activityMain.MainActivity" />
+        <activity android:name=".activity.IntegralActivity" />
+        <activity android:name=".activity.CashActivity" />
+        <activity android:name=".activity.RechargeActivity" />
+        <activity android:name=".activity.ApplyCashActivity" />
+        <activity android:name=".activity.ResultDetailActivity" />
+        <activity android:name=".activity.WithdrawalsActivity" />
+        <activity android:name=".activity.WithdrawalsAccountActivity" />
+        <activity android:name=".activity.PasswordActivity" />
+        <activity android:name=".activity.GiveIntegralRecordActivity" />
+        <activity android:name=".activity.ExchangeVerificationActivity" />
+        <activity android:name=".activity.ExchangeDetailsActivity" />
+        <activity android:name=".activity.GiveIntegralActivity" />
+        <activity android:name=".activity.ExchangeRecordActivity" />
+        <activity android:name=".activity.RedActivity" />
+        <activity android:name=".activity.RedDetailActivity" />
+        <activity android:name=".activity.SetRedActivity" />
+        <activity android:name=".activity.CardManagerActivity"/>
 
     </application>
 

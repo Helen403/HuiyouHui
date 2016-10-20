@@ -1,5 +1,8 @@
 package com.huiyouhui.activity;
 
+import android.view.View;
+import android.widget.TextView;
+
 import com.huiyouhui.R;
 import com.huiyouhui.adapter.RedAdapter;
 import com.huiyouhui.bean.RedBean;
@@ -17,6 +20,7 @@ public class RedActivity extends BaseActivity {
 
     MyRecycleView myRecycleView;
     RedAdapter redAdapter;
+    TextView tv_12;
 
     @Override
     public int getContentView() {
@@ -25,7 +29,9 @@ public class RedActivity extends BaseActivity {
 
     @Override
     public void findViews() {
+        setTitle("红包管理");
         myRecycleView = (MyRecycleView) findViewById(R.id.myrecycleview);
+        tv_12 = (TextView) findViewById(R.id.tv_12);
     }
 
 
@@ -36,6 +42,17 @@ public class RedActivity extends BaseActivity {
 
     @Override
     public void setListeners() {
+        setOnListeners(tv_12);
+        setOnClick(new onClick() {
+            @Override
+            public void onClick(View v, int id) {
+                switch (id) {
+                    case R.id.tv_12:
+                        goToActivityByClass(RedActivity.this, SetRedActivity.class);
+                        break;
+                }
+            }
+        });
 
     }
 
@@ -71,7 +88,19 @@ public class RedActivity extends BaseActivity {
             }
         });
 
+        redAdapter.setOnItemClickListener(new MyBaseRecycleAdapter.OnItemClickListener<RedBean>() {
+            @Override
+            public void onItemClick(View view, int position, RedBean redBean) {
+                //跳转到对应的红包详情
+                goToRedDetail(view, position, redBean);
+            }
+        });
 
+    }
+
+    private void goToRedDetail(View view, int position, RedBean redBean) {
+
+        goToActivityByClass(RedActivity.this, RedDetailActivity.class);
     }
 
 

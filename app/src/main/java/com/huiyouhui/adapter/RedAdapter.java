@@ -2,6 +2,7 @@ package com.huiyouhui.adapter;
 
 import android.content.Context;
 
+import com.huiyouhui.R;
 import com.huiyouhui.bean.RedBean;
 import com.huiyouhui.lib.base.MyBaseRecycleAdapter;
 import com.huiyouhui.lib.custemview.MyRecycleView;
@@ -16,7 +17,7 @@ public class RedAdapter extends MyBaseRecycleAdapter<RedBean> {
 
     @Override
     public int getContentView() {
-        return 0;
+        return R.layout.item_red;
     }
 
     @Override
