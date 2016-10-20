@@ -1,6 +1,7 @@
 package com.huiyouhui.activity;
 
 import android.view.View;
+import android.widget.TextView;
 
 import com.huiyouhui.R;
 import com.huiyouhui.adapter.CardManagerAdapter;
@@ -19,6 +20,8 @@ public class CardManagerActivity extends BaseActivity {
     MyRecycleView myRecycleView;
     CardManagerAdapter cardManagerAdapter;
 
+    TextView tv_12;
+
     @Override
     public int getContentView() {
         return R.layout.activity_card_manager;
@@ -28,6 +31,7 @@ public class CardManagerActivity extends BaseActivity {
     public void findViews() {
         setTitle("卡卷管理");
         myRecycleView = (MyRecycleView) findViewById(R.id.myrecycleview);
+        tv_12 = (TextView) findViewById(R.id.tv_12);
     }
 
     @Override
@@ -37,7 +41,17 @@ public class CardManagerActivity extends BaseActivity {
 
     @Override
     public void setListeners() {
-
+        setOnListeners(tv_12);
+        setOnClick(new onClick() {
+            @Override
+            public void onClick(View v, int id) {
+                switch (id) {
+                    case R.id.tv_12:
+                        goToActivityByClass(CardManagerActivity.this, SetCardActivity.class);
+                        break;
+                }
+            }
+        });
     }
 
 

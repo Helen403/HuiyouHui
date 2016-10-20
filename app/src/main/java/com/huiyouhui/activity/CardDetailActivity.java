@@ -48,6 +48,7 @@ public class CardDetailActivity extends BaseActivity {
         }
         cardDetailAdapter = new CardDetailAdapter(CardDetailActivity.this);
         listView.setAdapter(cardDetailAdapter);
+        cardDetailAdapter.setData(data);
     }
 
     @Override

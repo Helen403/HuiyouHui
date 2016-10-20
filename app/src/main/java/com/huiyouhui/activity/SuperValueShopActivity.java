@@ -1,5 +1,8 @@
 package com.huiyouhui.activity;
 
+import android.view.View;
+import android.widget.RelativeLayout;
+
 import com.huiyouhui.R;
 import com.huiyouhui.adapter.SuperValueAdapter;
 import com.huiyouhui.bean.SuperValueBean;
@@ -7,6 +10,7 @@ import com.huiyouhui.lib.MyRecycleView.MyLinearLayoutManager;
 import com.huiyouhui.lib.base.BaseActivity;
 import com.huiyouhui.lib.base.MyBaseRecycleAdapter;
 import com.huiyouhui.lib.custemview.MyRecycleView;
+import com.huiyouhui.view.RevokeShopView;
 
 import java.util.ArrayList;
 
@@ -16,7 +20,7 @@ import java.util.ArrayList;
 public class SuperValueShopActivity extends BaseActivity {
     private MyRecycleView myrecycleview;
     SuperValueAdapter superValueAdapter;
-
+    public RevokeShopView revokeShopView;
 
     @Override
     public int getContentView() {
@@ -31,6 +35,15 @@ public class SuperValueShopActivity extends BaseActivity {
         myrecycleview = (MyRecycleView) findViewById(R.id.myrecycleview);
     }
 
+
+    @Override
+    protected void onShowMessage(RelativeLayout relativeLayout) {
+        super.onShowMessage(relativeLayout);
+        revokeShopView = new RevokeShopView(SuperValueShopActivity.this);
+        revokeShopView.setVisibility(View.GONE);
+        relativeLayout.addView(revokeShopView);
+    }
+
     @Override
     public void initData() {
 
@@ -38,6 +51,12 @@ public class SuperValueShopActivity extends BaseActivity {
 
     @Override
     public void setListeners() {
+        getRightBtn().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToActivityByClass(SuperValueShopActivity.this, SetSuperValueActvity.class);
+            }
+        });
 
     }
 
@@ -57,7 +76,7 @@ public class SuperValueShopActivity extends BaseActivity {
             @Override
             public void onRefresh() {
                 ArrayList<SuperValueBean> data = new ArrayList<SuperValueBean>();
-                for (int i = 0; i < 5; i++) {
+                for (int i = 0; i < 2; i++) {
                     data.add(new SuperValueBean());
                 }
                 superValueAdapter.setRefresh(data);
@@ -72,11 +91,7 @@ public class SuperValueShopActivity extends BaseActivity {
                 superValueAdapter.setAddData(data);
             }
         });
-
-
         // 刷新
         myrecycleview.setRefresh(true);
-
-
     }
 }
