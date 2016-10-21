@@ -44,7 +44,7 @@ public class ExchangeDetailsActivity extends BaseActivity {
     public void findViews() {
         setTitle("兑换详情");
         tv1 = (TextView) findViewById(R.id.tv_1);
-        tv2 = (TextView) findViewById(R.id.tv_2);
+        tv2 = (TextView) findViewById(R.id.tv_1);
         tv3 = (TextView) findViewById(R.id.tv_3);
         tv4 = (TextView) findViewById(R.id.tv_4);
         tv5 = (TextView) findViewById(R.id.tv_5);

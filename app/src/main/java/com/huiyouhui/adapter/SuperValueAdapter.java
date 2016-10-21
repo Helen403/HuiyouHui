@@ -26,7 +26,7 @@ public class SuperValueAdapter extends MyBaseRecycleAdapter<SuperValueBean> {
 
     @Override
     public void onInitView(RecycleViewHolder holder, SuperValueBean superValueBean, int position) {
-        TextView tv2 = holder.getViewById(R.id.tv_2);
+        TextView tv2 = holder.getViewById(R.id.tv_1);
         tv2.getPaint().setFlags(Paint.STRIKE_THRU_TEXT_FLAG | Paint.ANTI_ALIAS_FLAG);//文件中间加下划线
 
         TextView tv3 = holder.getViewById(R.id.tv_3);

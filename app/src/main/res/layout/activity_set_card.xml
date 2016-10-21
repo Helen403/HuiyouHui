@@ -29,7 +29,7 @@
                 android:textSize="16sp" />
 
             <TextView
-                android:id="@+id/tv_2"
+                android:id="@+id/tv_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@+id/tv_1"
@@ -43,7 +43,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
-                android:layout_toRightOf="@+id/tv_2"
+                android:layout_toRightOf="@+id/tv_1"
                 android:text="抵用卷"
                 android:textColor="#fff"
                 android:textSize="16sp" />

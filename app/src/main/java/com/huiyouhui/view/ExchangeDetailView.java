@@ -32,7 +32,7 @@ public class ExchangeDetailView extends BaseView {
     @Override
     public void findViews() {
         tv1 = (TextView) findViewById(R.id.tv_1);
-        tv2 = (TextView) findViewById(R.id.tv_2);
+        tv2 = (TextView) findViewById(R.id.tv_1);
         tv3 = (TextView) findViewById(R.id.tv_3);
         finish = (TextView) findViewById(R.id.finish);
         rl = (RelativeLayout) findViewById(R.id.rl);

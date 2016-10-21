@@ -50,7 +50,7 @@ public class SetCardActivity extends BaseActivity {
 
         rl1 = (RelativeLayout) findViewById(R.id.rl1);
         tv1 = (TextView) findViewById(R.id.tv_1);
-        tv2 = (TextView) findViewById(R.id.tv_2);
+        tv2 = (TextView) findViewById(R.id.tv_1);
         tv3 = (TextView) findViewById(R.id.tv_3);
         tv4 = (TextView) findViewById(R.id.tv_4);
         tv5 = (TextView) findViewById(R.id.tv_5);

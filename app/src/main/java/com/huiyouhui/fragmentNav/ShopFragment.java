@@ -83,7 +83,7 @@ public class ShopFragment extends BaseFragment {
         myGridView = (MyGridView) contentView.findViewById(R.id.mygridview);
         ll = (LinearLayout) contentView.findViewById(R.id.ll);
         tv1 = (TextView) contentView.findViewById(R.id.tv_1);
-        tv2 = (TextView) contentView.findViewById(R.id.tv_2);
+        tv2 = (TextView) contentView.findViewById(R.id.tv_1);
         tv3 = (TextView) contentView.findViewById(R.id.tv_3);
         tv4 = (TextView) contentView.findViewById(R.id.tv_4);
     }

@@ -35,7 +35,7 @@ public class CashFillFragment extends BaseFragment {
     @Override
     public void findViews() {
         tv1 = (TextView) contentView.findViewById(R.id.tv_1);
-        tv2 = (TextView) contentView.findViewById(R.id.tv_2);
+        tv2 = (TextView) contentView.findViewById(R.id.tv_1);
         edittext = (EditText) contentView.findViewById(R.id.edittext);
         tv3 = (TextView) contentView.findViewById(R.id.tv_3);
         tv4 = (TextView) contentView.findViewById(R.id.tv_4);

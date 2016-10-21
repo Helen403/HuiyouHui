@@ -11,20 +11,20 @@ import com.huiyouhui.lib.base.BaseView;
 /**
  * Created by Administrator on 2016/10/13.
  */
-public class GiveView extends BaseView {
+public class DeleteDialogView extends BaseView {
     private RelativeLayout rlExit;
     private TextView tv1;
     private TextView tv2;
     private TextView tv3;
-    public TextView finish;
+    private TextView finish;
     private TextView keepon;
-    public GiveView(Context context) {
+    public DeleteDialogView(Context context) {
         super(context);
     }
 
     @Override
     public int getContentView() {
-        return R.layout.view_recharge;
+        return R.layout.view_delete;
     }
 
     @Override
@@ -39,10 +39,6 @@ public class GiveView extends BaseView {
 
     @Override
     public void initData() {
-        tv1.setText("赠送成功");
-        tv2.setText("你赠送给'Helen'的200积分");
-        tv3.setText("已送出,总消费0元");
-        keepon.setText("继续赠送");
 
     }
 
@@ -57,7 +53,7 @@ public class GiveView extends BaseView {
                     case R.id.rl_exit:
                         view.setVisibility(GONE);
                         break;
-                    //继续赠送
+                    //继续充值
                     case R.id.keepon:
                         view.setVisibility(GONE);
                         break;

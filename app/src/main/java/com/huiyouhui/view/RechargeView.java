@@ -31,7 +31,7 @@ public class RechargeView extends BaseView {
     public void findViews() {
         rlExit = (RelativeLayout) findViewById(R.id.rl_exit);
         tv1 = (TextView) findViewById(R.id.tv_1);
-        tv2 = (TextView) findViewById(R.id.tv_2);
+        tv2 = (TextView) findViewById(R.id.tv_1);
         tv3 = (TextView) findViewById(R.id.tv_3);
         finish = (TextView) findViewById(R.id.finish);
         keepon = (TextView) findViewById(R.id.keepon);

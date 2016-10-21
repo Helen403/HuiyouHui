@@ -58,7 +58,7 @@ public class PersonMessageView extends BaseView {
     public void findViews() {
         icon = (CircleImageView) findViewById(R.id.icon);
         tv1 = (TextView) findViewById(R.id.tv_1);
-        tv2 = (TextView) findViewById(R.id.tv_2);
+        tv2 = (TextView) findViewById(R.id.tv_1);
         tv3 = (TextView) findViewById(R.id.tv_3);
         tv4 = (TextView) findViewById(R.id.tv_4);
         iv1 = (ImageView) findViewById(R.id.iv_1);

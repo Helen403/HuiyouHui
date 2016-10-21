@@ -32,7 +32,7 @@ public class GiveIntegralRecordActivity extends BaseActivity {
         setTitle("赠送记录");
 
         tv1 = (TextView) findViewById(R.id.tv_1);
-        tv2 = (TextView) findViewById(R.id.tv_2);
+        tv2 = (TextView) findViewById(R.id.tv_1);
         tv3 = (TextView) findViewById(R.id.tv_3);
         myrecycleview = (MyRecycleView) findViewById(R.id.myrecycleview);
     }

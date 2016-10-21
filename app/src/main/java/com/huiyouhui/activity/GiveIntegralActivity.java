@@ -40,7 +40,7 @@ public class GiveIntegralActivity extends BaseActivity {
 
         tv1 = (TextView) findViewById(R.id.tv_1);
         edit1 = (EditText) findViewById(R.id.edit_1);
-        tv2 = (TextView) findViewById(R.id.tv_2);
+        tv2 = (TextView) findViewById(R.id.tv_1);
         tv3 = (TextView) findViewById(R.id.tv_3);
         tv4 = (TextView) findViewById(R.id.tv_4);
         edit2 = (EditText) findViewById(R.id.edit_2);

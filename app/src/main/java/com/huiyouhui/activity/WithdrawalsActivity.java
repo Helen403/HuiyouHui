@@ -32,7 +32,7 @@ public class WithdrawalsActivity extends BaseActivity {
     public void findViews() {
         setTitle("申请记录");
         tv1 = (TextView) findViewById(R.id.tv_1);
-        tv2 = (TextView) findViewById(R.id.tv_2);
+        tv2 = (TextView) findViewById(R.id.tv_1);
         tv3 = (TextView) findViewById(R.id.tv_3);
         tv4 = (TextView) findViewById(R.id.tv_4);
         myrecycleview = (MyRecycleView) findViewById(R.id.myrecycleview);

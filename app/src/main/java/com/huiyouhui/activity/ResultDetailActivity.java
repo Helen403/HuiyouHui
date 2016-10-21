@@ -50,7 +50,7 @@ public class ResultDetailActivity extends BaseActivity {
         v4 = findViewById(R.id.v_4);
         iv3 = (ImageView) findViewById(R.id.iv_3);
         ll2 = (LinearLayout) findViewById(R.id.ll2);
-        tv2 = (TextView) findViewById(R.id.tv_2);
+        tv2 = (TextView) findViewById(R.id.tv_1);
         tv3 = (TextView) findViewById(R.id.tv_3);
         tv4 = (TextView) findViewById(R.id.tv_4);
         tv5 = (TextView) findViewById(R.id.tv_5);

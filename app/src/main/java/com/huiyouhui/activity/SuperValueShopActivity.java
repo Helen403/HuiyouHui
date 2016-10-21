@@ -21,7 +21,6 @@ public class SuperValueShopActivity extends BaseActivity {
     private MyRecycleView myrecycleview;
     SuperValueAdapter superValueAdapter;
     public RevokeShopView revokeShopView;
-
     @Override
     public int getContentView() {
         return R.layout.activity_super_value_shop;
@@ -31,7 +30,6 @@ public class SuperValueShopActivity extends BaseActivity {
     public void findViews() {
         setTitle("超值商品管理");
         getRightBtn().setText("添加商品");
-
         myrecycleview = (MyRecycleView) findViewById(R.id.myrecycleview);
     }
 

@@ -44,7 +44,7 @@ public class MarkFragment extends BaseFragment {
         tv1 = (TextView) contentView.findViewById(R.id.tv_1);
         rl2 = (RelativeLayout) contentView.findViewById(R.id.rl2);
         iv2 = (ImageView) contentView.findViewById(R.id.iv_2);
-        tv2 = (TextView) contentView.findViewById(R.id.tv_2);
+        tv2 = (TextView) contentView.findViewById(R.id.tv_1);
         rl3 = (RelativeLayout) contentView.findViewById(R.id.rl3);
         iv3 = (ImageView) contentView.findViewById(R.id.iv_3);
         tv3 = (TextView) contentView.findViewById(R.id.tv_3);

@@ -12,7 +12,7 @@
         android:textColor="#AAAAAA" />
 
     <TextView
-        android:id="@+id/tv_2"
+        android:id="@+id/tv_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_1"
@@ -24,7 +24,7 @@
         android:id="@+id/tv_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tv_2"
+        android:layout_below="@id/tv_1"
         android:paddingTop="3dp"
         android:text="结算现金"
         android:textColor="#AAAAAA" />

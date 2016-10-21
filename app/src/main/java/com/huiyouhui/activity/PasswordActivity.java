@@ -33,7 +33,7 @@ public class PasswordActivity extends BaseActivity {
 
         tv1 = (TextView) findViewById(R.id.tv_1);
         edit1 = (EditText) findViewById(R.id.edit_1);
-        tv2 = (TextView) findViewById(R.id.tv_2);
+        tv2 = (TextView) findViewById(R.id.tv_1);
         edit2 = (EditText) findViewById(R.id.edit_2);
         tv3 = (TextView) findViewById(R.id.tv_3);
         edit3 = (EditText) findViewById(R.id.edit_3);
