@@ -41,7 +41,6 @@ public class IntegralActivity extends BaseActivity {
     @Override
     public void initData() {
 
-        MyRecycleView();
     }
 
     @Override
@@ -49,7 +48,11 @@ public class IntegralActivity extends BaseActivity {
     }
 
 
-    private void MyRecycleView() {
+
+    @Override
+    protected void onAttachMyRecycleViewAdapter() {
+        super.onAttachMyRecycleViewAdapter();
+
         // 使用重写后的线性布局管理器
         MyLinearLayoutManager manager = new MyLinearLayoutManager(this);
         myrecycleview.setLayoutManager(manager);

@@ -54,11 +54,6 @@ public class PasswordActivity extends BaseActivity {
                 switch (id) {
                     //确定修改密码
                     case R.id.tv_12:
-//                        Toast toast = new Toast(PasswordActivity.this);
-//                        toast.setDuration(Toast.LENGTH_SHORT);
-//                        toast.setGravity(CONTEXT_INCLUDE_CODE, 0, 0);
-//                        toast.setText("密码已修改");
-//                        toast.show();
                         T("密码已修改");
                         break;
                 }
