@@ -80,6 +80,9 @@
         <activity android:name=".activity.ProductManagerActivity" />
         <activity android:name=".activity.FinanceActivity" />
         <activity android:name=".activity.ShopSettingActivity"/>
+        <activity android:name=".activity.PayRecordActivity"/>
+        <activity android:name=".activity.PayDetailActivity"/>
+        <activity android:name=".activity.MemberManagerActivity"/>
 
 
     </application>
