@@ -271,14 +271,14 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
 
             View v = tabsContainer.getChildAt(i);
 
-            v.setBackgroundResource(tabBackgroundResId);
+//			v.setBackgroundResource(tabBackgroundResId);
 
             if (v instanceof TextView) {
 
                 TextView tab = (TextView) v;
                 tab.setTextSize(TypedValue.COMPLEX_UNIT_PX, tabTextSize);
                 tab.setTypeface(tabTypeface, tabTypefaceStyle);
-//				tab.setTextColor(tabTextColor);
+				tab.setTextColor(tabTextColor);
 
                 // setAllCaps() is only available from API 14, so the upper case is made manually if we are on a
                 // pre-ICS-build
@@ -409,25 +409,14 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
     private void setColor(int position) {
         TextView textView0 = (TextView) tabsContainer.getChildAt(0);
         TextView textView1 = (TextView) tabsContainer.getChildAt(1);
-        TextView textView2 = (TextView) tabsContainer.getChildAt(1);
         switch (position) {
             case 0:
                 textView0.setTextColor(getResources().getColor(R.color.deep_green));
                 textView1.setTextColor(getResources().getColor(R.color.light_green));
-                if (textView2 != null)
-                    textView2.setTextColor(getResources().getColor(R.color.light_green));
                 break;
             case 1:
                 textView0.setTextColor(getResources().getColor(R.color.light_green));
                 textView1.setTextColor(getResources().getColor(R.color.deep_green));
-                if (textView2 != null)
-                    textView2.setTextColor(getResources().getColor(R.color.light_green));
-                break;
-            case 2:
-                textView0.setTextColor(getResources().getColor(R.color.light_green));
-                textView1.setTextColor(getResources().getColor(R.color.light_green));
-                if (textView2 != null)
-                    textView2.setTextColor(getResources().getColor(R.color.deep_green));
                 break;
             default:
                 break;

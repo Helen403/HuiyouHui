@@ -2,11 +2,14 @@ package com.huiyouhui.adapter;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.huiyouhui.R;
+import com.huiyouhui.activity.EditShopActivity;
 import com.huiyouhui.bean.ManagerShopBean;
 import com.huiyouhui.constant.Constants;
 import com.huiyouhui.lib.base.BaseActivity;
@@ -24,12 +27,20 @@ public class ShopManagerAdapter extends MyBaseRecycleAdapter<ManagerShopBean> {
     private TextView tv_click_4;
     private BaseActivity mContext;
     private Dialog mDialog;
+    private Toast mToast;
 
     public ShopManagerAdapter(Context context, MyRecycleView mRecyclerView) {
         super(context, mRecyclerView);
         mContext = (BaseActivity) context;
         View dialogView = mContext.getLayoutInflater().inflate(R.layout.view_delete, null);
         initDialog(dialogView);
+        initToast();
+    }
+
+    private void initToast() {
+        mToast = Toast.makeText(mContext, "", Toast.LENGTH_SHORT);
+        mToast.setGravity(Gravity.CENTER, 0, 0);
+        mToast.setText("删除成功");
     }
 
     private TextView tv1;
@@ -40,12 +51,13 @@ public class ShopManagerAdapter extends MyBaseRecycleAdapter<ManagerShopBean> {
         tv1 = (TextView) dialogView.findViewById(R.id.tv_1);
         finish = (TextView) dialogView.findViewById(R.id.finish);
         keepon = (TextView) dialogView.findViewById(R.id.keepon);
-        mDialog = new Dialog(mContext, android.R.style.Theme_DeviceDefault_Dialog_MinWidth);
+        mDialog = new Dialog(mContext, R.style.alert_dialog);
         mDialog.setContentView(dialogView);
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 mDialog.dismiss();
+                mToast.show();
             }
         });
         keepon.setOnClickListener(new View.OnClickListener() {
@@ -76,13 +88,13 @@ public class ShopManagerAdapter extends MyBaseRecycleAdapter<ManagerShopBean> {
             public void onClick(View v, int id) {
                 switch (id) {
                     case R.id.tv_click_1:
+                        mContext.goToActivityByClass(mContext, EditShopActivity.class);
                         break;
                     case R.id.tv_click_2:
                         break;
                     case R.id.tv_click_3:
                         break;
                     case R.id.tv_click_4:
-//                        showDeleteDialog();
                         mDialog.show();
                         break;
                 }

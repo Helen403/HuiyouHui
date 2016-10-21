@@ -53,7 +53,12 @@ public class ProductManagerActivity extends BaseActivity {
         initTabNames();
         tv1.setVisibility(View.GONE);
         mRecycleview.setVisibility(View.VISIBLE);
-
+        getRightBtn().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToActivityByClass(ProductManagerActivity.this, AddShopActivity.class);
+            }
+        });
 
     }
 
@@ -117,7 +122,7 @@ public class ProductManagerActivity extends BaseActivity {
             @Override
             public void onStateChage(int position) {
                 mCurrentState = position;
-                switch (position){
+                switch (position) {
                     case Constants.Song.Order_State_up:
                         List<ManagerShopBean> arr = getSelectOrderUp();
                         list.clear();

@@ -2,9 +2,6 @@ package com.huiyouhui.factroy;
 
 import android.text.TextUtils;
 
-import com.huiyouhui.activity.FinanceActivity;
-import com.huiyouhui.activity.MemberManagerActivity;
-import com.huiyouhui.activity.PayRecordActivity;
 import com.huiyouhui.activity.ProductManagerActivity;
 import com.huiyouhui.activity.ShopSettingActivity;
 
@@ -28,11 +25,11 @@ public class ProjectFactroy {
             case "商品管理":
                 return ProductManagerActivity.class;
             case "财务管理":
-                return FinanceActivity.class;
+                return ProductManagerActivity.class;
             case "买单记录":
-                return PayRecordActivity.class;
+                return ProductManagerActivity.class;
             case "会员管理":
-                return MemberManagerActivity.class;
+                return ProductManagerActivity.class;
             case "公告设置":
                 return ProductManagerActivity.class;
             case "评价管理":

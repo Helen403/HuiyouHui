@@ -54,7 +54,8 @@ public class ShopSettingActivity extends BaseActivity {
         tv12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                T("保存成功");
+                finish();
             }
         });
     }
@@ -66,7 +67,29 @@ public class ShopSettingActivity extends BaseActivity {
 
     @Override
     public void setListeners() {
-
+        setOnListeners(cv2, iv2, iv3, iv4, tv5, tv6, tv7, tv8, tv9);
+        setOnClick(new onClick() {
+            @Override
+            public void onClick(View v, int id) {
+                switch (id) {
+                    case R.id.cv_2:
+                        goToActivityByClass(ShopSettingActivity.this, UpdateSignboardActivity.class);
+                        break;
+                    case R.id.iv_2:
+                        break;
+                    case R.id.iv_3:
+                        break;
+                    case R.id.iv_4:
+                        break;
+                    case R.id.tv_5:
+                        break;
+                    case R.id.tv_6:
+                        break;
+                    case R.id.tv_7:
+                        break;
+                }
+            }
+        });
     }
 
 

@@ -39,6 +39,7 @@ public class GiveIntegralRecordActivity extends BaseActivity {
 
     @Override
     public void initData() {
+        MyRecycleView();
     }
 
     @Override
@@ -46,9 +47,7 @@ public class GiveIntegralRecordActivity extends BaseActivity {
 
     }
 
-    @Override
-    protected void onAttachMyRecycleViewAdapter() {
-        super.onAttachMyRecycleViewAdapter();
+    private void MyRecycleView() {
         // 使用重写后的线性布局管理器
         MyLinearLayoutManager manager = new MyLinearLayoutManager(this);
         myrecycleview.setLayoutManager(manager);
@@ -78,6 +77,5 @@ public class GiveIntegralRecordActivity extends BaseActivity {
 
             }
         });
-
     }
 }

@@ -41,17 +41,34 @@ public class CashActivity extends BaseActivity {
     @Override
     public void initData() {
 
+        MyRecycleView();
+
+
+//        Param param = new Param();
+//        param.put("pid",123);
+//        ControlUtils.postsEveryTime("http://hyh2.281.com.cn/api.php/home/address/findtown", param, asdas.class, new ControlUtils.OnControlUtils<asdas>() {
+//            @Override
+//            public void onSuccess(String url, asdas asdas, ArrayList<asdas> list, String result, JSONObject jsonObject, JSONArray jsonArray) {
+//
+//            }
+//
+//            @Override
+//            public void onFailure(String url) {
+//
+//            }
+//        });
+
     }
 
     @Override
     public void setListeners() {
 
+
+
     }
 
 
-    @Override
-    protected void onAttachMyRecycleViewAdapter() {
-        super.onAttachMyRecycleViewAdapter();
+    private void MyRecycleView() {
         // 使用重写后的线性布局管理器
         MyLinearLayoutManager manager = new MyLinearLayoutManager(this);
         myrecycleview.setLayoutManager(manager);
@@ -81,6 +98,8 @@ public class CashActivity extends BaseActivity {
 
             }
         });
-
     }
+
+
+
 }
