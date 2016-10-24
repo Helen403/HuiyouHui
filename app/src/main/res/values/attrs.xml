@@ -7,22 +7,21 @@
     </declare-styleable>
 
     <declare-styleable name="ToolBar">
-        <attr name="text" format="reference"/>
-        <attr name="textColor" format="reference"/>
-        <attr name="textSize" format="dimension"/>
+        <attr name="text" format="reference" />
+        <attr name="textColor" format="reference" />
+        <attr name="textSize" format="dimension" />
         <attr name="width" format="dimension" />
     </declare-styleable>
     <declare-styleable name="Customer">
         <attr name="src" format="reference" />
-        <attr name="label" format="reference"/>
-        <attr name="checked" format="boolean"/>
-        <attr name="value" format="integer"/>
+        <attr name="label" format="reference" />
+        <attr name="checked" format="boolean" />
+        <attr name="value" format="integer" />
         <attr name="style">
             <enum name="rectangle" value="1" />
             <enum name="circle" value="2" />
         </attr>
     </declare-styleable>
-
 
 
     <declare-styleable name="PagerSlidingTabStrip">
@@ -40,29 +39,29 @@
     </declare-styleable>
 
 
-
-
     <declare-styleable name="navattr">
-        <attr name="checkedimg" format="reference"/>
-        <attr name="uncheckedimg" format="reference"/>
-        <attr name="count" format="integer"/>
+        <attr name="checkedimg" format="reference" />
+        <attr name="uncheckedimg" format="reference" />
+        <attr name="count" format="integer" />
     </declare-styleable>
 
 
     <declare-styleable name="animimageattr">
-        <attr name="datas" format="reference"/>
-        <attr name="loutanim" format="reference"/>
-        <attr name="rinanim" format="reference"/>
-        <attr name="routanim" format="reference"/>
-        <attr name="linanim" format="reference"/>
+        <attr name="datas" format="reference" />
+        <attr name="loutanim" format="reference" />
+        <attr name="rinanim" format="reference" />
+        <attr name="routanim" format="reference" />
+        <attr name="linanim" format="reference" />
     </declare-styleable>
-
-
 
 
     <declare-styleable name="JDAdverView">
         <attr name="gap" format="integer" />
-        <attr name="animDuration" format="integer"/>
+        <attr name="animDuration" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="SnapUpCountDownTimerView">
+        <attr name="viewSize" format="integer" />
     </declare-styleable>
 
 

@@ -252,7 +252,7 @@
                 android:textSize="16sp" />
 
             <TextView
-                android:id="@+id/tv_1"
+                android:id="@+id/tv_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
@@ -267,9 +267,8 @@
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:layout_centerVertical="true"
-                android:layout_toLeftOf="@+id/tv_1"
+                android:layout_toLeftOf="@+id/tv_2"
                 android:background="@null" />
-
 
         </RelativeLayout>
 

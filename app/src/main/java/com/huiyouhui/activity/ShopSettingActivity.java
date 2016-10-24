@@ -78,14 +78,23 @@ public class ShopSettingActivity extends BaseActivity {
                     case R.id.iv_2:
                         break;
                     case R.id.iv_3:
+                        goToActivityByClass(ShopSettingActivity.this, SetPhoneActivity.class);
                         break;
                     case R.id.iv_4:
+                        goToActivityByClass(ShopSettingActivity.this, SetContactActivity.class);
                         break;
                     case R.id.tv_5:
                         break;
                     case R.id.tv_6:
                         break;
                     case R.id.tv_7:
+                        goToActivityByClass(ShopSettingActivity.this, SetPhotosActivity.class);
+                        break;
+                    case R.id.tv_8:
+                        goToActivityByClass(ShopSettingActivity.this, SetAddressActivity.class);
+                        break;
+                    case R.id.tv_9:
+                        goToActivityByClass(ShopSettingActivity.this, SetLocationActivity.class);
                         break;
                 }
             }

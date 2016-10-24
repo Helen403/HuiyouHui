@@ -7,6 +7,7 @@ import com.huiyouhui.R;
 import com.huiyouhui.adapter.ShopManagerAdapter;
 import com.huiyouhui.bean.ManagerShopBean;
 import com.huiyouhui.constant.Constants;
+import com.huiyouhui.dialog.PhotoSelectDialog;
 import com.huiyouhui.lib.MyRecycleView.MyLinearLayoutManager;
 import com.huiyouhui.lib.base.BaseActivity;
 import com.huiyouhui.lib.base.MyBaseRecycleAdapter;
@@ -41,6 +42,7 @@ public class ProductManagerActivity extends BaseActivity {
         tv1 = (TextView) findViewById(R.id.tv_1);
         mRecycleview = (MyRecycleView) findViewById(R.id.recycleview);
         mSlidingTab = (SlidingTab) findViewById(R.id.slidingTab);
+
     }
 
     @Override

@@ -7,6 +7,7 @@ import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
 import android.view.animation.TranslateAnimation;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -14,6 +15,7 @@ import android.widget.TextView;
 import com.huiyouhui.R;
 import com.huiyouhui.activity.ExchangeVerificationActivity;
 import com.huiyouhui.activity.GiveIntegralActivity;
+import com.huiyouhui.activity.PreViewActivity;
 import com.huiyouhui.adapter.JDViewAdapter;
 import com.huiyouhui.adapter.ShopAdapter;
 import com.huiyouhui.bean.AdverNotice;
@@ -68,6 +70,7 @@ public class ShopFragment extends BaseFragment {
     TextView tv2;
     TextView tv3;
     TextView tv4;
+    private ImageView iv1;
 
     /****************************************/
 
@@ -86,6 +89,13 @@ public class ShopFragment extends BaseFragment {
         tv2 = (TextView) contentView.findViewById(R.id.tv_1);
         tv3 = (TextView) contentView.findViewById(R.id.tv_3);
         tv4 = (TextView) contentView.findViewById(R.id.tv_4);
+        iv1 = (ImageView) contentView.findViewById(R.id.iv_1);
+        iv1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToActivityByClass(getActivity(), PreViewActivity.class);
+            }
+        });
     }
 
     @Override

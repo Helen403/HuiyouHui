@@ -279,12 +279,9 @@
                     android:paddingLeft="10dp"
                     android:text="地理坐标"
                     android:textColor="#B4B4B4" />
-
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp" />
-
-
                 <TextView
                     android:id="@+id/tv_12"
                     android:layout_width="match_parent"

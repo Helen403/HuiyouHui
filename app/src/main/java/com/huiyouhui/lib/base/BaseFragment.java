@@ -92,9 +92,9 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         setClick();
-        onAttachMyRecycleViewAdapter();
         //检测网络状态
         checkNet();
+        onAttachMyRecycleViewAdapter();
     }
 
 

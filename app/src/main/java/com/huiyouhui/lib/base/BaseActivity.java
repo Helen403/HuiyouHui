@@ -195,6 +195,15 @@ public abstract class BaseActivity extends FragmentActivity implements View.OnCl
         checkNet();
     }
 
+    /**
+     * iv
+     *
+     * @param savedInstanceState
+     */
+    protected void onBundleExist(Bundle savedInstanceState) {
+
+    }
+
 
     /**
      * 设置结束当前Activity广播

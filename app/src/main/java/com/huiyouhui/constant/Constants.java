@@ -23,6 +23,14 @@ public interface Constants {
         int Order_State_up = 0;
         int Order_State_down = 1;
         int Order_State_Loding = 2;
+        /**
+         * 省份
+         * 城市
+         * 地区
+         */
+        int select_province = 11;
+        int select_citys = 22;
+        int select_district = 33;
     }
 
     /******************************************************************************************/
