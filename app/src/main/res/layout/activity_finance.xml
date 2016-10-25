@@ -31,7 +31,7 @@
                     android:layout_height="90dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
-                    android:src="@mipmap/ic_launcher" />
+                    android:src="@mipmap/finance_menu_integral" />
 
                 <TextView
                     android:id="@+id/tv_1"
@@ -68,7 +68,7 @@
                     android:layout_height="90dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
-                    android:src="@mipmap/ic_launcher" />
+                    android:src="@mipmap/finance_menu_cash" />
 
                 <TextView
                     android:id="@+id/tv_2"

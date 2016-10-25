@@ -54,7 +54,7 @@ public class CashFillFragment extends BaseFragment {
 
     @Override
     public void setListeners() {
-        setOnListeners(tv12);
+        setOnListeners(tv12, iv2, iv4);
         setOnClick(new onClick() {
             @Override
             public void onClick(View v, int id) {
@@ -73,7 +73,11 @@ public class CashFillFragment extends BaseFragment {
                             });
                         }
                         break;
+                    case R.id.iv_2:
 
+                        break;
+                    case R.id.iv_4:
+                        break;
                 }
             }
         });

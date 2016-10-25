@@ -27,16 +27,17 @@
         android:layout_below="@id/tv_1"
         android:paddingTop="3dp"
         android:text="结算现金"
-        android:textColor="#AAAAAA" />
+        android:textColor="#AAAAAA"
+        android:visibility="gone" />
 
 
     <TextView
         android:id="@+id/tv_4"
-        android:textColor="#F9AAA5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="-1000" />
+        android:text="-1000"
+        android:textColor="#F9AAA5" />
 
 
     <TextView

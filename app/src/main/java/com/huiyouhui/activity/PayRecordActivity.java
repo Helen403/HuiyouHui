@@ -59,9 +59,9 @@ public class PayRecordActivity extends BaseActivity {
         //滑动条颜色
         pagerSliding.setIndicatorColor(Color.parseColor("#DD5D54"));
         pagerSliding.setTextColor(Color.parseColor("#C5C5C5"));
-        pagerSliding.setTextSize(40);
+        pagerSliding.setTextSize(sp2px(this, 11));
         pagerSliding.setFillViewport(true);
-        pagerSliding.setIndicatorHeight(15);
+        pagerSliding.setIndicatorHeight(4);
         pagerSliding.setIndicatorColorResource(R.color.deep_green);
 
         mTabImageAdapter = new TabImageAdapter(this);
