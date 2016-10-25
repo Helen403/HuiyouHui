@@ -67,10 +67,11 @@ public abstract class BaseActivity extends FragmentActivity implements View.OnCl
     protected ViewGroup contentView;
     //头部View
     protected RelativeLayout head_view;
-    protected TextView tv_left, tv_title, tv_right;
+    protected ImageView tv_left;
+    protected TextView tv_title, tv_right;
     /*******************************************/
     //设置左边默认图片
-    protected static final int leftDrawable = R.mipmap.ic_launcher;
+    protected static final int leftDrawable = R.mipmap.nor_menu_return;
     //设置右边默认图片
     private static final int RightDrawable = R.mipmap.ic_launcher;
     /*******************************************/
@@ -282,16 +283,16 @@ public abstract class BaseActivity extends FragmentActivity implements View.OnCl
         ly_content.addView(head_view);
 
         //添加左边的按钮
-        tv_left = (TextView) head_view.findViewById(R.id.tv_left);
-        Drawable drawableLeft = ContextCompat.getDrawable(this, leftDrawable);
-        assert drawableLeft != null;
-        drawableLeft.setBounds(0, 0, dip2px(this, 30), dip2px(this, 30));//第一0是距左边距离，第二0是距上边距离，40分别是长宽
-        tv_left.setCompoundDrawables(null, drawableLeft, null, null);//只放上边
+        tv_left = (ImageView) head_view.findViewById(R.id.tv_left);
+//        Drawable drawableLeft = ContextCompat.getDrawable(this, leftDrawable);
+//        assert drawableLeft != null;
+//        drawableLeft.setBounds(0, 0, dip2px(this, 30), dip2px(this, 30));//第一0是距左边距离，第二0是距上边距离，40分别是长宽
+//        tv_left.setCompoundDrawables(null, drawableLeft, null, null);//只放上边
 
         //添加中间的文本
         tv_title = (TextView) head_view.findViewById(R.id.tv_title);
         tv_title.setGravity(Gravity.CENTER);
-        tv_title.setText("中间的标题");
+        tv_title.setText("");
         tv_title.setTextSize(18);
         tv_title.setTextColor(Color.WHITE);
 
@@ -364,7 +365,7 @@ public abstract class BaseActivity extends FragmentActivity implements View.OnCl
     /**
      * 得到左边的按钮
      */
-    public TextView getLeftBtn() {
+    public ImageView getLeftBtn() {
         return tv_left;
     }
 
@@ -400,7 +401,7 @@ public abstract class BaseActivity extends FragmentActivity implements View.OnCl
             Drawable drawableRight = ContextCompat.getDrawable(this, resId);
             assert drawableRight != null;
             drawableRight.setBounds(0, 0, 80, 80);//第一0是距左边距离，第二0是距上边距离，40分别是长宽
-            tv_left.setCompoundDrawables(null, drawableRight, null, null);//只放上边
+//            tv_left.setCompoundDrawables(null, drawableRight, null, null);//只放上边
         }
     }
 
@@ -494,7 +495,6 @@ public abstract class BaseActivity extends FragmentActivity implements View.OnCl
      * 判断是否铺满全屏
      */
     public void setFullScreen() {
-
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         Window window = this.getWindow();
         //设置透明状态栏,这样才能让 ContentView 向上

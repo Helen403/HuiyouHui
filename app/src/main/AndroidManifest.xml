@@ -48,6 +48,12 @@
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="60SNQNGZYR14LVR7d0y5sBIQasOfSGDN" />
+        <meta-data
+            android:name="design_width"
+            android:value="768" />
+        <meta-data
+            android:name="design_height"
+            android:value="1280" />
 
         <activity
             android:name=".lib.activityMain.WelcomeActivity"
@@ -99,6 +105,8 @@
         <activity android:name=".activity.SetAddressActivity" />
         <activity android:name=".activity.SetLocationActivity" />
         <activity android:name=".activity.SelectCityActivity" />
+        <activity android:name=".activity.JobManageActivity" />
+        <activity android:name=".activity.AddJobActivity" />
 
 
     </application>

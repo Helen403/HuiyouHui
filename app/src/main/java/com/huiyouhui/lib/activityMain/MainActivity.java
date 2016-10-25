@@ -56,8 +56,8 @@ public final class MainActivity extends FragmentActivity implements RadioGroup.O
      */
     private Fragment[] fragments = {new ShopFragment(), new MarkFragment()};
     private String titles[] = {"店铺管理", "营销管理"};
-    private int[] bg_normal = {R.mipmap.custermview_commodity_normal, R.mipmap.custermview_commodity_normal};
-    private int[] bg_pressed = {R.mipmap.custermview_commodity_pressed, R.mipmap.custermview_commodity_pressed};
+    private int[] bg_normal = {R.mipmap.tab_menu_store_nor, R.mipmap.tab_menu_marketing_nor};
+    private int[] bg_pressed = {R.mipmap.tab_menu_store_selected, R.mipmap.tab_menu_marketing_selected};
 
     //导航栏的布局ID
     private static final int controlNavID = R.layout.custermview_control_nav;
@@ -120,7 +120,7 @@ public final class MainActivity extends FragmentActivity implements RadioGroup.O
 
         //根据文本获取资源ID  第一个 解决初始化hide找不到问题
         currentIndex = getResources().getIdentifier("rb_0", "id", getPackageName());
-        radioButtons[0].setSelected(true);
+        radioButtons[0].setTextColor(getResources().getColor(R.color.bg_color));
         rgTab.setOnCheckedChangeListener(this);
         initService();
     }
@@ -150,14 +150,13 @@ public final class MainActivity extends FragmentActivity implements RadioGroup.O
         ft.commit();
     }
 
-
     /**
      * 调整标题对应的文字和图片
      */
     private void initTabView(RadioButton radioButton, String title, int normal, int pressed) {
 
         radioButton.setText(title);
-        radioButton.setBackgroundColor(Color.rgb(228, 238, 249));
+//        radioButton.setBackgroundColor(Color.rgb(228, 238, 249));
 
         StateListDrawable drawable = new StateListDrawable();
         //Non focused states
@@ -175,7 +174,7 @@ public final class MainActivity extends FragmentActivity implements RadioGroup.O
                 ContextCompat.getDrawable(this, normal));
         drawable.addState(new int[]{android.R.attr.state_pressed},
                 ContextCompat.getDrawable(this, pressed));
-        drawable.setBounds(0, 0, 80, 80);//第一0是距左边距离，第二0是距上边距离，40分别是长宽
+        drawable.setBounds(0, 80, 0, 80);//第一0是距左边距离，第二0是距上边距离，40分别是长宽
         radioButton.setCompoundDrawablesWithIntrinsicBounds(null, drawable, null, null);
     }
 
@@ -227,7 +226,7 @@ public final class MainActivity extends FragmentActivity implements RadioGroup.O
         tv_title.setBackgroundColor(color);
         tv_title.setGravity(Gravity.CENTER);
         tv_title.setSingleLine();
-        tv_title.setText("中间的标题");
+        tv_title.setText("");
         tv_title.setTextSize(16);
         head_view.addView(tv_title);
 
@@ -264,6 +263,7 @@ public final class MainActivity extends FragmentActivity implements RadioGroup.O
             int resId = getResources().getIdentifier("rb_" + i, "id", getPackageName());
             radioButtons[i] = (RadioButton) control_nav.findViewById(resId);
         }
+        radioButtons[0].setSelected(true);
         rgTab = (RadioGroup) control_nav.findViewById(R.id.rg_tab);
         ly_content.addView(control_nav);
 

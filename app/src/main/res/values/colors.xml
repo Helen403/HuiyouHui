@@ -37,4 +37,6 @@
     <color name="Order_State_down">#bbb</color>
     <color name="Order_State_runling">#77d0b0</color>
 
+    <color name="title_bg_job">#f9c53b</color>
+    <color name="layout_bg_main">#f5f5f5</color>
 </resources>

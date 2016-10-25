@@ -17,13 +17,11 @@ import com.huiyouhui.activity.ExchangeVerificationActivity;
 import com.huiyouhui.activity.GiveIntegralActivity;
 import com.huiyouhui.activity.PreViewActivity;
 import com.huiyouhui.adapter.JDViewAdapter;
-import com.huiyouhui.adapter.ShopAdapter;
 import com.huiyouhui.bean.AdverNotice;
-import com.huiyouhui.bean.ShopBean;
+import com.huiyouhui.factroy.ProjectFactroy;
 import com.huiyouhui.lib.base.BaseFragment;
 import com.huiyouhui.lib.custemview.CircleImageView;
 import com.huiyouhui.lib.custemview.JDAdverView;
-import com.huiyouhui.lib.custemview.MyGridView;
 import com.huiyouhui.view.AdverView;
 import com.huiyouhui.view.ExitAppView;
 import com.huiyouhui.view.MashView;
@@ -40,11 +38,6 @@ public class ShopFragment extends BaseFragment {
     //头像
     CircleImageView icon;
     /****************************************/
-    //下面的
-    MyGridView myGridView;
-    //下面gridview的图片和对应的文字
-    int[] imgs = {R.mipmap.ic_launcher, R.mipmap.ic_launcher, R.mipmap.ic_launcher, R.mipmap.ic_launcher, R.mipmap.ic_launcher, R.mipmap.ic_launcher, R.mipmap.ic_launcher, R.mipmap.ic_launcher, R.mipmap.ic_launcher};
-    String[] titles = {"店铺设置", "商品管理", "财务管理", "买单记录", "会员管理", "评价管理", "公告设置", "广告管理", "招聘管理"};
 
     /****************************************/
     //轮播
@@ -71,6 +64,8 @@ public class ShopFragment extends BaseFragment {
     TextView tv3;
     TextView tv4;
     private ImageView iv1;
+    //九个模块
+    private RelativeLayout rl_1, rl_2, rl_3, rl_4, rl_5, rl_6, rl_7, rl_8, rl_9;
 
     /****************************************/
 
@@ -83,19 +78,31 @@ public class ShopFragment extends BaseFragment {
     public void findViews() {
         icon = (CircleImageView) contentView.findViewById(R.id.icon);
         tbView = (JDAdverView) contentView.findViewById(R.id.jdadver);
-        myGridView = (MyGridView) contentView.findViewById(R.id.mygridview);
         ll = (LinearLayout) contentView.findViewById(R.id.ll);
         tv1 = (TextView) contentView.findViewById(R.id.tv_1);
         tv2 = (TextView) contentView.findViewById(R.id.tv_1);
         tv3 = (TextView) contentView.findViewById(R.id.tv_3);
         tv4 = (TextView) contentView.findViewById(R.id.tv_4);
         iv1 = (ImageView) contentView.findViewById(R.id.iv_1);
+
+        rl_1 = (RelativeLayout) contentView.findViewById(R.id.rl1);
+        rl_2 = (RelativeLayout) contentView.findViewById(R.id.rl2);
+        rl_3 = (RelativeLayout) contentView.findViewById(R.id.rl3);
+        rl_4 = (RelativeLayout) contentView.findViewById(R.id.rl4);
+        rl_5 = (RelativeLayout) contentView.findViewById(R.id.rl5);
+        rl_6 = (RelativeLayout) contentView.findViewById(R.id.rl6);
+        rl_7 = (RelativeLayout) contentView.findViewById(R.id.rl7);
+        rl_8 = (RelativeLayout) contentView.findViewById(R.id.rl8);
+        rl_9 = (RelativeLayout) contentView.findViewById(R.id.rl9);
+
         iv1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 goToActivityByClass(getActivity(), PreViewActivity.class);
             }
         });
+
+
     }
 
     @Override
@@ -104,21 +111,7 @@ public class ShopFragment extends BaseFragment {
         hideHeadView();
         //轮播字体上下
         adver();
-        //下面gridview
-        gridview();
-    }
 
-    private void gridview() {
-
-        ShopAdapter shopAdapter = new ShopAdapter(getActivity());
-        myGridView.setAdapter(shopAdapter);
-
-        ArrayList<ShopBean> data = new ArrayList<>();
-        int count = imgs.length;
-        for (int i = 0; i < count; i++) {
-            data.add(new ShopBean(imgs[i], titles[i]));
-        }
-        shopAdapter.setData(data);
 
     }
 
@@ -166,7 +159,7 @@ public class ShopFragment extends BaseFragment {
 
     @Override
     public void setListeners() {
-        setOnListeners(ll, icon, exit, cancel, sure, personMessageView.personIv5, tv1, tv2, tv3, tv4);
+        setOnListeners(ll, icon, exit, cancel, sure, personMessageView.personIv5, tv1, tv2, tv3, tv4, rl_1, rl_2, rl_3, rl_4, rl_5, rl_6, rl_7, rl_8, rl_9);
         setOnClick(new onClick() {
             @Override
             public void onClick(View v, int id) {
@@ -236,7 +229,6 @@ public class ShopFragment extends BaseFragment {
                     //点击退出App
                     case R.id.exit:
                         exitAppView.setVisibility(View.VISIBLE);
-
                         break;
                     //点击取消退出App
                     case R.id.cancel:
@@ -246,7 +238,6 @@ public class ShopFragment extends BaseFragment {
                     case R.id.sure:
                         activity.finish();
                         break;
-
                     //赠送积分
                     case R.id.tv_1:
                         goToActivityByClass(getActivity(), GiveIntegralActivity.class);
@@ -263,11 +254,45 @@ public class ShopFragment extends BaseFragment {
                     case R.id.tv_4:
                         goToActivityByClass(getActivity(), ExchangeVerificationActivity.class);
                         break;
-
+                    //店铺设置
+                    case R.id.rl1:
+                        goToActivityByClass(getActivity(), ProjectFactroy.getClazzByModelName("店铺设置"));
+                        break;
+                    //商品管理
+                    case R.id.rl2:
+                        goToActivityByClass(getActivity(), ProjectFactroy.getClazzByModelName("商品管理"));
+                        break;
+                    //财务管理
+                    case R.id.rl3:
+                        goToActivityByClass(getActivity(), ProjectFactroy.getClazzByModelName("财务管理"));
+                        break;
+                    //买单记录
+                    case R.id.rl4:
+                        goToActivityByClass(getActivity(), ProjectFactroy.getClazzByModelName("买单记录"));
+                        break;
+                    //会员管理
+                    case R.id.rl5:
+                        goToActivityByClass(getActivity(), ProjectFactroy.getClazzByModelName("会员管理"));
+                        break;
+                    //评价管理
+                    case R.id.rl6:
+                        goToActivityByClass(getActivity(), ProjectFactroy.getClazzByModelName("评价管理"));
+                        break;
+                    //公告设置
+                    case R.id.rl7:
+                        goToActivityByClass(getActivity(), ProjectFactroy.getClazzByModelName("公告设置"));
+                        break;
+                    //广告管理
+                    case R.id.rl8:
+                        goToActivityByClass(getActivity(), ProjectFactroy.getClazzByModelName("广告管理"));
+                        break;
+                    //招聘管理
+                    case R.id.rl9:
+                        goToActivityByClass(getActivity(), ProjectFactroy.getClazzByModelName("招聘管理"));
+                        break;
                 }
             }
         });
-
     }
 
 

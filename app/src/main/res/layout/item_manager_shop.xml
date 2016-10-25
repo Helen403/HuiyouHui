@@ -29,12 +29,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/imageUrl"
-            android:layout_marginBottom="5dip"
+            android:layout_marginBottom="2dp"
             android:layout_toEndOf="@+id/imageUrl"
             android:layout_toRightOf="@+id/imageUrl"
             android:text="title"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="#a9a9a9" />
+            android:textColor="#a9a9a9"
+            android:textSize="16sp" />
 
         <LinearLayout
             android:id="@+id/linearLayout"
@@ -51,8 +51,8 @@
                 android:layout_height="0dip"
                 android:layout_weight="1"
                 android:text="exchangePrice"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:textColor="@color/bg_color" />
+                android:textColor="@color/bg_color"
+                android:textSize="12sp" />
 
             <TextView
                 android:id="@+id/finalPrice"
@@ -60,8 +60,8 @@
                 android:layout_height="0dip"
                 android:layout_weight="1"
                 android:text="finalPrice"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:textColor="@color/bg_color" />
+                android:textColor="@color/bg_color"
+                android:textSize="12sp" />
 
         </LinearLayout>
 

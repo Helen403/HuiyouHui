@@ -3,6 +3,7 @@ package com.huiyouhui.factroy;
 import android.text.TextUtils;
 
 import com.huiyouhui.activity.FinanceActivity;
+import com.huiyouhui.activity.JobManageActivity;
 import com.huiyouhui.activity.MemberManagerActivity;
 import com.huiyouhui.activity.PayRecordActivity;
 import com.huiyouhui.activity.ProductManagerActivity;
@@ -40,7 +41,7 @@ public class ProjectFactroy {
             case "广告管理":
                 return ProductManagerActivity.class;
             case "招聘管理":
-                return ProductManagerActivity.class;
+                return JobManageActivity.class;
             default:
                 return null;
         }
