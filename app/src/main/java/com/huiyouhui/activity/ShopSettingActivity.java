@@ -23,7 +23,7 @@ public class ShopSettingActivity extends BaseActivity {
 
     @Override
     public void findViews() {
-        mWipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.wwipeRefreshLayout);
+        mWipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipeRefreshLayout);
         mWipeRefreshLayout.setColorSchemeColors(getResources().getColor(R.color.bg_color));
         tv1 = (TextView) findViewById(R.id.tv_1);
         cv2 = (CircleImageView) findViewById(R.id.cv_2);

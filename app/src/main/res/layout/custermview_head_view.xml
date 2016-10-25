@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="44dp">
+    android:layout_height="88px"
+    android:background="@color/bg_color">
 
 
-    <TextView
+    <ImageView
         android:id="@+id/tv_left"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:padding="10dp"
-        android:singleLine="true" />
+        android:padding="30px"
+        android:singleLine="true"
+        android:src="@mipmap/nor_menu_return" />
 
     <TextView
         android:id="@+id/tv_title"
@@ -26,8 +28,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:padding="10dp"
+        android:padding="20px"
         android:singleLine="true" />
 
 
-</RelativeLayout>
+</com.zhy.autolayout.AutoRelativeLayout>
