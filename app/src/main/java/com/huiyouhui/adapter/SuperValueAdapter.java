@@ -16,7 +16,7 @@ import com.huiyouhui.lib.custemview.MyRecycleView;
  */
 public class SuperValueAdapter extends MyBaseRecycleAdapter<SuperValueBean> {
     public SuperValueAdapter(Context context, MyRecycleView mRecyclerView) {
-        super(context, mRecyclerView);
+        super( mRecyclerView);
     }
 
     @Override

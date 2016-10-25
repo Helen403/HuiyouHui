@@ -73,28 +73,28 @@ public class ShopSettingActivity extends BaseActivity {
             public void onClick(View v, int id) {
                 switch (id) {
                     case R.id.cv_2:
-                        goToActivityByClass(ShopSettingActivity.this, UpdateSignboardActivity.class);
+                        goToActivityByClass( UpdateSignboardActivity.class);
                         break;
                     case R.id.iv_2:
                         break;
                     case R.id.iv_3:
-                        goToActivityByClass(ShopSettingActivity.this, SetPhoneActivity.class);
+                        goToActivityByClass( SetPhoneActivity.class);
                         break;
                     case R.id.iv_4:
-                        goToActivityByClass(ShopSettingActivity.this, SetContactActivity.class);
+                        goToActivityByClass(SetContactActivity.class);
                         break;
                     case R.id.tv_5:
                         break;
                     case R.id.tv_6:
                         break;
                     case R.id.tv_7:
-                        goToActivityByClass(ShopSettingActivity.this, SetPhotosActivity.class);
+                        goToActivityByClass( SetPhotosActivity.class);
                         break;
                     case R.id.tv_8:
-                        goToActivityByClass(ShopSettingActivity.this, SetAddressActivity.class);
+                        goToActivityByClass( SetAddressActivity.class);
                         break;
                     case R.id.tv_9:
-                        goToActivityByClass(ShopSettingActivity.this, SetLocationActivity.class);
+                        goToActivityByClass( SetLocationActivity.class);
                         break;
                 }
             }

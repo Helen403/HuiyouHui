@@ -21,6 +21,7 @@ public class SuperValueShopActivity extends BaseActivity {
     private MyRecycleView myrecycleview;
     SuperValueAdapter superValueAdapter;
     public RevokeShopView revokeShopView;
+
     @Override
     public int getContentView() {
         return R.layout.activity_super_value_shop;
@@ -52,7 +53,7 @@ public class SuperValueShopActivity extends BaseActivity {
         getRightBtn().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                goToActivityByClass(SuperValueShopActivity.this, SetSuperValueActvity.class);
+                goToActivityByClass(SetSuperValueActvity.class);
             }
         });
 

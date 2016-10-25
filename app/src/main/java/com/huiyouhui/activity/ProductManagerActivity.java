@@ -58,7 +58,7 @@ public class ProductManagerActivity extends BaseActivity {
         getRightBtn().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                goToActivityByClass(ProductManagerActivity.this, AddShopActivity.class);
+                goToActivityByClass(AddShopActivity.class);
             }
         });
 

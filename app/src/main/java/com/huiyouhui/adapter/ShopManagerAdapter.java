@@ -30,7 +30,7 @@ public class ShopManagerAdapter extends MyBaseRecycleAdapter<ManagerShopBean> {
     private Toast mToast;
 
     public ShopManagerAdapter(Context context, MyRecycleView mRecyclerView) {
-        super(context, mRecyclerView);
+        super( mRecyclerView);
         mContext = (BaseActivity) context;
         View dialogView = mContext.getLayoutInflater().inflate(R.layout.view_delete, null);
         initDialog(dialogView);
@@ -88,7 +88,7 @@ public class ShopManagerAdapter extends MyBaseRecycleAdapter<ManagerShopBean> {
             public void onClick(View v, int id) {
                 switch (id) {
                     case R.id.tv_click_1:
-                        mContext.goToActivityByClass(mContext, EditShopActivity.class);
+                        goToActivityByClass( EditShopActivity.class);
                         break;
                     case R.id.tv_click_2:
                         break;

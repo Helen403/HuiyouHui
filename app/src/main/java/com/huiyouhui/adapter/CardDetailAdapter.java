@@ -1,6 +1,5 @@
 package com.huiyouhui.adapter;
 
-import android.content.Context;
 import android.graphics.Color;
 import android.view.View;
 
@@ -13,9 +12,7 @@ import com.huiyouhui.lib.custemview.CircleImageView;
  * Created by Administrator on 2016/10/20.
  */
 public class CardDetailAdapter extends MyBaseAdapter<CardDetailBean> {
-    public CardDetailAdapter(Context context) {
-        super(context);
-    }
+
 
     @Override
     public int getContentView() {

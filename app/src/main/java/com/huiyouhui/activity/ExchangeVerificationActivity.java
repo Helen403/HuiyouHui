@@ -43,7 +43,7 @@ public class ExchangeVerificationActivity extends BaseActivity {
         getRightBtn().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                goToActivityByClass(ExchangeVerificationActivity.this, ExchangeRecordActivity.class);
+                goToActivityByClass( ExchangeRecordActivity.class);
             }
         });
 
@@ -54,7 +54,7 @@ public class ExchangeVerificationActivity extends BaseActivity {
                 switch (id) {
                     //查询
                     case R.id.tv_12:
-                        goToActivityByClass(ExchangeVerificationActivity.this, ExchangeDetailsActivity.class);
+                        goToActivityByClass( ExchangeDetailsActivity.class);
                         break;
                 }
             }

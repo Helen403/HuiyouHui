@@ -97,11 +97,11 @@ public class FinanceActivity extends BaseActivity {
                 switch (id) {
                     //积分记录
                     case R.id.rl_1:
-                        goToActivityByClass(FinanceActivity.this, IntegralActivity.class);
+                        goToActivityByClass( IntegralActivity.class);
                         break;
                     //现金记录
                     case R.id.rl_2:
-                        goToActivityByClass(FinanceActivity.this, CashActivity.class);
+                        goToActivityByClass( CashActivity.class);
                         break;
                 }
             }

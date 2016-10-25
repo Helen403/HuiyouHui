@@ -14,7 +14,7 @@ import com.huiyouhui.lib.custemview.MyRecycleView;
  */
 public class ExchangeRecordAdapter extends MyBaseRecycleAdapter<ExchangeRecordBean> {
     public ExchangeRecordAdapter(Context context, MyRecycleView mRecyclerView) {
-        super(context, mRecyclerView);
+        super( mRecyclerView);
     }
 
     @Override

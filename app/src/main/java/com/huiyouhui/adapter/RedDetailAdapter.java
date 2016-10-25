@@ -14,7 +14,7 @@ import com.huiyouhui.lib.custemview.MyRecycleView;
  */
 public class RedDetailAdapter extends MyBaseRecycleAdapter<RedDetailBean> {
     public RedDetailAdapter(Context context, MyRecycleView mRecyclerView) {
-        super(context, mRecyclerView);
+        super( mRecyclerView);
     }
 
     @Override

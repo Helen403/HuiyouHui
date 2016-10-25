@@ -43,9 +43,9 @@ public abstract class MyBaseAdapter<T> extends BaseAdapter implements View.OnCli
     protected ArrayList<T> data;
     protected View view;
 
-    public MyBaseAdapter(Context context) {
+    public MyBaseAdapter() {
         this.data = new ArrayList<>();
-        this.context = context;
+        this.context = BaseActivity.context;
     }
 
     /**

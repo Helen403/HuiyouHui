@@ -77,7 +77,7 @@ public class ExchangeDetailsActivity extends BaseActivity {
         for (int i = 0; i < 2; i++) {
             data.add(new ExchangeDetailBean());
         }
-        exchangeDetailAdapter = new ExchangeDetailAdapter(ExchangeDetailsActivity.this);
+        exchangeDetailAdapter = new ExchangeDetailAdapter();
         listview.setAdapter(exchangeDetailAdapter);
         exchangeDetailAdapter.setData(data);
 

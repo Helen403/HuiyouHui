@@ -13,7 +13,7 @@ import com.huiyouhui.lib.custemview.MyRecycleView;
 public class GiveIntegralRecordAdapter extends MyBaseRecycleAdapter<GiveIntegralRecordBean> {
 
     public GiveIntegralRecordAdapter(Context context, MyRecycleView mRecyclerView) {
-        super(context, mRecyclerView);
+        super( mRecyclerView);
     }
 
     @Override

@@ -107,6 +107,9 @@
         <activity android:name=".activity.SelectCityActivity" />
         <activity android:name=".activity.JobManageActivity" />
         <activity android:name=".activity.AddJobActivity" />
+        <activity android:name=".activity.EvaluationManagementActivity" />
+        <activity android:name=".activity.ReplyCommentActivity" />
+        <activity android:name=".activity.EvaluationDetailActivity"/>
 
 
     </application>

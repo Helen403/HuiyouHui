@@ -48,7 +48,7 @@ public class RedActivity extends BaseActivity {
             public void onClick(View v, int id) {
                 switch (id) {
                     case R.id.tv_12:
-                        goToActivityByClass(RedActivity.this, SetRedActivity.class);
+                        goToActivityByClass( SetRedActivity.class);
                         break;
                 }
             }
@@ -100,7 +100,7 @@ public class RedActivity extends BaseActivity {
 
     private void goToRedDetail(View view, int position, RedBean redBean) {
 
-        goToActivityByClass(RedActivity.this, RedDetailActivity.class);
+        goToActivityByClass( RedDetailActivity.class);
     }
 
 

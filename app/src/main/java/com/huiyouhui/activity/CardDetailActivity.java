@@ -46,7 +46,7 @@ public class CardDetailActivity extends BaseActivity {
         for (int i = 0; i < 4; i++) {
             data.add(new CardDetailBean());
         }
-        cardDetailAdapter = new CardDetailAdapter(CardDetailActivity.this);
+        cardDetailAdapter = new CardDetailAdapter();
         listView.setAdapter(cardDetailAdapter);
         cardDetailAdapter.setData(data);
     }

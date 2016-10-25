@@ -12,7 +12,7 @@ import com.huiyouhui.lib.custemview.MyRecycleView;
  */
 public class CardManagerAdapter extends MyBaseRecycleAdapter<CardManagerBean> {
     public CardManagerAdapter(Context context, MyRecycleView mRecyclerView) {
-        super(context, mRecyclerView);
+        super( mRecyclerView);
     }
 
     @Override

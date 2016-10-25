@@ -12,7 +12,7 @@ import com.huiyouhui.lib.custemview.MyRecycleView;
  */
 public class RedAdapter extends MyBaseRecycleAdapter<RedBean> {
     public RedAdapter(Context context, MyRecycleView mRecyclerView) {
-        super(context, mRecyclerView);
+        super( mRecyclerView);
     }
 
     @Override

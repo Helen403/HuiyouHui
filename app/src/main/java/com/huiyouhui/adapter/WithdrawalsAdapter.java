@@ -12,7 +12,7 @@ import com.huiyouhui.lib.custemview.MyRecycleView;
  */
 public class WithdrawalsAdapter extends MyBaseRecycleAdapter<WithdrawalsBean> {
     public WithdrawalsAdapter(Context context, MyRecycleView mRecyclerView) {
-        super(context, mRecyclerView);
+        super( mRecyclerView);
     }
 
     @Override

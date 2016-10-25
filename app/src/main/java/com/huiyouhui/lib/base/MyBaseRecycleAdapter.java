@@ -21,6 +21,8 @@ import com.huiyouhui.lib.custemview.MyRecycleView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  * Created by SNOY on 2016/8/13.
@@ -39,8 +41,8 @@ public abstract class MyBaseRecycleAdapter<T> extends RecyclerView.Adapter<MyBas
         mListener = li;
     }
 
-    public MyBaseRecycleAdapter(Context context, MyRecycleView mRecyclerView) {
-        this.context = context;
+    public MyBaseRecycleAdapter( MyRecycleView mRecyclerView) {
+        this.context = BaseActivity.context;
         this.data = new ArrayList<>();
         this.mRecyclerView = mRecyclerView;
         init();
@@ -360,7 +362,41 @@ public abstract class MyBaseRecycleAdapter<T> extends RecyclerView.Adapter<MyBas
 
 
     /*****************************************************************************************************/
+    /*********************************************************************/
+    /**
+     * 跳转到另一个Activity，不携带数据，不设置flag
+     */
+    public void goToActivityByClass(Class<?> cls) {
+        Intent intent = new Intent();
+        intent.setClass(context, cls);
+        context.startActivity(intent);
+    }
 
+    /**
+     * 跳转到另一个Activity，携带数据
+     */
+    public void goToActivityByClass(Class<?> cls, Bundle bundle) {
+        Intent intent = new Intent();
+        intent.setClass(context, cls);
+        intent.putExtras(bundle);
+        context.startActivity(intent);
+    }
+
+
+    /**
+     * 延迟去往新的Activity
+     */
+    public void delayToActivity(final Class<?> cls, long delay) {
+        Timer timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                context.startActivity(new Intent(context, cls));
+            }
+        }, delay);
+    }
+
+    /********************************************************************************************/
 
     private OnRefresh onrefresh;
 

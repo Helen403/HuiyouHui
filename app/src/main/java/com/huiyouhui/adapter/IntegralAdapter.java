@@ -13,7 +13,7 @@ import com.huiyouhui.lib.custemview.MyRecycleView;
 public class IntegralAdapter extends MyBaseRecycleAdapter<IntegralBean> {
 
     public IntegralAdapter(Context context, MyRecycleView mRecyclerView) {
-        super(context, mRecyclerView);
+        super( mRecyclerView);
     }
 
     @Override

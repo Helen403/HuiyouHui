@@ -59,7 +59,7 @@ public class ApplyCashActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
 
-                goToActivityByClass(ApplyCashActivity.this, WithdrawalsActivity.class);
+                goToActivityByClass( WithdrawalsActivity.class);
             }
         });
         setOnListeners(tv12);
@@ -69,7 +69,7 @@ public class ApplyCashActivity extends BaseActivity {
                 switch (id) {
                     //申请提现
                     case R.id.tv_12:
-                        goToActivityByClass(ApplyCashActivity.this, ResultDetailActivity.class);
+                        goToActivityByClass( ResultDetailActivity.class);
                         break;
                 }
             }

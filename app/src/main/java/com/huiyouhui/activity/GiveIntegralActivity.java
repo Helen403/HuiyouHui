@@ -70,7 +70,7 @@ public class GiveIntegralActivity extends BaseActivity {
         getRightBtn().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                goToActivityByClass(GiveIntegralActivity.this, GiveIntegralRecordActivity.class);
+                goToActivityByClass( GiveIntegralRecordActivity.class);
             }
         });
 

@@ -133,7 +133,7 @@ public class SelectCityActivity extends BaseActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if (mCurrentType != Constants.Song.select_district) {
-                    goToActivityByClass(SelectCityActivity.this, SelectCityActivity.class, bundle);
+                    goToActivityByClass( SelectCityActivity.class, bundle);
                     finish();
                 } else {
                     T("设置成功");

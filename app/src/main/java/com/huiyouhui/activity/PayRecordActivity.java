@@ -44,7 +44,7 @@ public class PayRecordActivity extends BaseActivity {
         getRightBtn().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                goToActivityByClass(PayRecordActivity.this, FinanceActivity.class);
+                goToActivityByClass( FinanceActivity.class);
             }
         });
     }

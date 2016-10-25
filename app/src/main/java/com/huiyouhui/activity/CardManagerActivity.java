@@ -47,7 +47,7 @@ public class CardManagerActivity extends BaseActivity {
             public void onClick(View v, int id) {
                 switch (id) {
                     case R.id.tv_12:
-                        goToActivityByClass(CardManagerActivity.this, SetCardActivity.class);
+                        goToActivityByClass( SetCardActivity.class);
                         break;
                 }
             }
@@ -90,7 +90,7 @@ public class CardManagerActivity extends BaseActivity {
         cardManagerAdapter.setOnItemClickListener(new MyBaseRecycleAdapter.OnItemClickListener<CardManagerBean>() {
             @Override
             public void onItemClick(View view, int position, CardManagerBean cardManagerBean) {
-                goToActivityByClass(CardManagerActivity.this, CardDetailActivity.class);
+                goToActivityByClass( CardDetailActivity.class);
             }
         });
 

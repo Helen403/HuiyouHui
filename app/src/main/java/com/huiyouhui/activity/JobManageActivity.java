@@ -44,7 +44,7 @@ public class JobManageActivity extends BaseActivity {
         getRightBtn().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                goToActivityByClass(JobManageActivity.this, AddJobActivity.class);
+                goToActivityByClass( AddJobActivity.class);
             }
         });
         mWipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {

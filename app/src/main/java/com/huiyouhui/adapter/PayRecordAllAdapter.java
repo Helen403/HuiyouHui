@@ -14,7 +14,7 @@ import com.huiyouhui.lib.custemview.MyRecycleView;
  */
 public class PayRecordAllAdapter extends MyBaseRecycleAdapter<PayRecordAllBean> {
     public PayRecordAllAdapter(Context context, MyRecycleView mRecyclerView) {
-        super(context, mRecyclerView);
+        super(mRecyclerView);
     }
 
     @Override

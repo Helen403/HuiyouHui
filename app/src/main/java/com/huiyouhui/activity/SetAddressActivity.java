@@ -38,7 +38,7 @@ public class SetAddressActivity extends BaseActivity {
                 if (v == iv1) {
                     Bundle bundle = new Bundle();
                     bundle.putInt("type", Constants.Song.select_province);
-                    goToActivityByClass(SetAddressActivity.this, SelectCityActivity.class, bundle);
+                    goToActivityByClass(SelectCityActivity.class, bundle);
                 }
             }
         });

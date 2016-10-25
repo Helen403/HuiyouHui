@@ -15,9 +15,6 @@ import com.huiyouhui.lib.base.MyBaseAdapter;
 public class ShopAdapter extends MyBaseAdapter<ShopBean> {
 
 
-    public ShopAdapter(Context context) {
-        super(context);
-    }
 
     @Override
     public int getContentView() {

@@ -40,7 +40,7 @@ public class SetSuperValueActvity extends BaseActivity {
             public void onClick(View v, int id) {
                 switch (id) {
                     case R.id.rl_1:
-                        goToActivityByClass(SetSuperValueActvity.this, ChoiceShopActivity.class);
+                        goToActivityByClass( ChoiceShopActivity.class);
                         break;
                     case R.id.tv_12:
                         finish();

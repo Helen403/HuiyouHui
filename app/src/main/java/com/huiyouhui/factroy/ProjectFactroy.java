@@ -2,6 +2,7 @@ package com.huiyouhui.factroy;
 
 import android.text.TextUtils;
 
+import com.huiyouhui.activity.EvaluationManagementActivity;
 import com.huiyouhui.activity.FinanceActivity;
 import com.huiyouhui.activity.JobManageActivity;
 import com.huiyouhui.activity.MemberManagerActivity;
@@ -37,7 +38,7 @@ public class ProjectFactroy {
             case "公告设置":
                 return ProductManagerActivity.class;
             case "评价管理":
-                return ProductManagerActivity.class;
+                return EvaluationManagementActivity.class;
             case "广告管理":
                 return ProductManagerActivity.class;
             case "招聘管理":
