@@ -57,6 +57,7 @@
             android:src="@drawable/ic_pulltorefresh_arrow" />
 
         <com.huiyouhui.lib.LRecyclerView.view.SimpleViewSwitcher
+
             android:id="@+id/listview_header_progressbar"
             android:layout_width="30dip"
             android:layout_height="30dip"
