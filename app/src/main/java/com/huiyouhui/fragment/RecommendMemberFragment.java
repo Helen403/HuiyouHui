@@ -65,7 +65,6 @@ public class RecommendMemberFragment extends BaseFragment {
                     data.add(new RecommendMemberBean());
                 }
                 recommendMemberAdapter.setAddData(data);
-
             }
         });
     }
