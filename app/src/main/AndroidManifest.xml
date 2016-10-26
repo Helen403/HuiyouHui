@@ -109,7 +109,8 @@
         <activity android:name=".activity.AddJobActivity" />
         <activity android:name=".activity.EvaluationManagementActivity" />
         <activity android:name=".activity.ReplyCommentActivity" />
-        <activity android:name=".activity.EvaluationDetailActivity"/>
+        <activity android:name=".activity.EvaluationDetailActivity" />
+        <activity android:name=".activity.EditJobActivity" />
 
 
     </application>
