@@ -6,28 +6,22 @@
     android:orientation="vertical">
 
 
-    <android.support.v4.widget.SwipeRefreshLayout
-        android:id="@+id/swipeRefreshLayout"
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <FrameLayout
+        <TextView
+            android:id="@+id/tv_0"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            android:gravity="center_horizontal"
+            android:text="您暂无招聘信息，可按右上角进行添加"
+            android:visibility="gone" />
 
-            <TextView
-                android:id="@+id/tv_0"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="50dp"
-                android:gravity="center_horizontal"
-                android:text="您暂无招聘信息，可按右上角进行添加"
-                android:visibility="visible" />
-
-            <ListView
-                android:id="@+id/listview"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-        </FrameLayout>
-    </android.support.v4.widget.SwipeRefreshLayout>
+        <com.huiyouhui.lib.LRecyclerView.recyclerview.LRecyclerView
+            android:id="@+id/lrecyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
 </LinearLayout>

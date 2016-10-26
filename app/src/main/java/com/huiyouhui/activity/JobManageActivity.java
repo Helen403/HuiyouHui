@@ -1,13 +1,18 @@
 package com.huiyouhui.activity;
 
-import android.os.Handler;
-import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.View;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import com.huiyouhui.R;
+import com.huiyouhui.adapter.JobManAdapter;
+import com.huiyouhui.bean.JobManBean;
+import com.huiyouhui.lib.LRecyclerView.interfaces.OnLoadMoreListener;
+import com.huiyouhui.lib.LRecyclerView.interfaces.OnRefreshListener;
+import com.huiyouhui.lib.LRecyclerView.recyclerview.LRecyclerView;
+import com.huiyouhui.lib.LRecyclerView.recyclerview.LRecyclerViewAdapter;
 import com.huiyouhui.lib.base.BaseActivity;
+
+import java.util.ArrayList;
 
 /**
  * Created by Administrator on 2016/10/24 0024.
@@ -15,9 +20,9 @@ import com.huiyouhui.lib.base.BaseActivity;
 public class JobManageActivity extends BaseActivity {
 
 
-    private ListView mListView;
     private TextView mTv0;
-    private SwipeRefreshLayout mWipeRefreshLayout;
+    LRecyclerView lRecyclerView;
+    LRecyclerViewAdapter lRecyclerViewAdapter;
 
     @Override
     public int getContentView() {
@@ -26,10 +31,8 @@ public class JobManageActivity extends BaseActivity {
 
     @Override
     public void findViews() {
-        mWipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipeRefreshLayout);
-        mWipeRefreshLayout.setColorSchemeColors(getResources().getColor(R.color.bg_color));
-        mListView = (ListView) findViewById(R.id.listview);
         mTv0 = (TextView) findViewById(R.id.tv_0);
+        lRecyclerView = (LRecyclerView) findViewById(R.id.lrecyclerview);
     }
 
     @Override
@@ -44,20 +47,38 @@ public class JobManageActivity extends BaseActivity {
         getRightBtn().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                goToActivityByClass( AddJobActivity.class);
+                goToActivityByClass(AddJobActivity.class);
             }
         });
-        mWipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+    }
+
+    @Override
+    protected void onAttachMyRecycleViewAdapter() {
+        super.onAttachMyRecycleViewAdapter();
+        lRecyclerViewAdapter = new LRecyclerViewAdapter(JobManageActivity.this, JobManAdapter.class, lRecyclerView);
+        lRecyclerView.setAdapter(lRecyclerViewAdapter);
+        lRecyclerView.setOnRefreshListener(new OnRefreshListener() {
             @Override
             public void onRefresh() {
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        T("刷新成功");
-                        mWipeRefreshLayout.setRefreshing(false);
-                    }
-                }, 1500);
+                ArrayList<JobManBean> data = new ArrayList<JobManBean>();
+                for (int i = 0; i < 4; i++) {
+                    data.add(new JobManBean());
+                }
+                lRecyclerViewAdapter.setRefresh(data);
             }
         });
+        lRecyclerView.setOnLoadMoreListener(new OnLoadMoreListener() {
+            @Override
+            public void onLoadMore() {
+                ArrayList<JobManBean> data = new ArrayList<JobManBean>();
+                for (int i = 0; i < 1; i++) {
+                    data.add(new JobManBean());
+                }
+                lRecyclerViewAdapter.setAddData(data);
+            }
+        });
+        //刷新数据
+        lRecyclerView.setRefreshing(true);
+
     }
 }

@@ -30,7 +30,6 @@ public abstract class MyLBaseRecycleAdapter<T> extends RecyclerView.Adapter<MyLB
     private ArrayList<T> data;
     public Context context;
 
-
     private OnItemClickListener<T> mListener;
 
     public void setOnItemClickListener(OnItemClickListener<T> li) {
