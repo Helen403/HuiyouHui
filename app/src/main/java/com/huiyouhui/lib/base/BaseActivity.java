@@ -39,6 +39,7 @@ import com.huiyouhui.R;
 import com.huiyouhui.lib.Utils.ImageUtils;
 import com.huiyouhui.lib.custemview.BufferCircleView;
 import com.huiyouhui.lib.custemview.MyNetFailView;
+import com.zhy.autolayout.utils.AutoUtils;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -285,6 +286,7 @@ public abstract class BaseActivity extends FragmentActivity implements View.OnCl
         head_view = (RelativeLayout) inflater.inflate(R.layout.custermview_head_view, ly_content, false);
         head_view.setBackgroundColor(color);
         ly_content.addView(head_view);
+        AutoUtils.autoSize(ly_content);
 
         //添加左边的按钮
         tv_left = (ImageView) head_view.findViewById(R.id.tv_left);

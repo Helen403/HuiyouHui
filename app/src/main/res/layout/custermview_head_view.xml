@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="88px"
+    android:layout_height="55dip"
     android:background="@color/bg_color">
 
 
@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:padding="30px"
+        android:padding="15dp"
         android:singleLine="true"
         android:src="@mipmap/nor_menu_return" />
 
@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:padding="20px"
+        android:padding="10dp"
         android:singleLine="true" />
 
 

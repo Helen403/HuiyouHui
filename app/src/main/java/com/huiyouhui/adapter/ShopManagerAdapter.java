@@ -16,6 +16,7 @@ import com.huiyouhui.lib.base.BaseActivity;
 import com.huiyouhui.lib.base.BaseApplication;
 import com.huiyouhui.lib.base.MyBaseRecycleAdapter;
 import com.huiyouhui.lib.custemview.MyRecycleView;
+import com.zhy.autolayout.utils.AutoUtils;
 
 /**
  * Created by Administrator on 2016/10/20 0020.
@@ -30,9 +31,9 @@ public class ShopManagerAdapter extends MyBaseRecycleAdapter<ManagerShopBean> {
     private Toast mToast;
 
     public ShopManagerAdapter(Context context, MyRecycleView mRecyclerView) {
-        super( mRecyclerView);
+        super(mRecyclerView);
         mContext = (BaseActivity) context;
-        View dialogView = mContext.getLayoutInflater().inflate(R.layout.view_delete, null);
+        View dialogView = mContext.getLayoutInflater().inflate(R.layout.view_delete, null, false);
         initDialog(dialogView);
         initToast();
     }
@@ -75,6 +76,7 @@ public class ShopManagerAdapter extends MyBaseRecycleAdapter<ManagerShopBean> {
 
     @Override
     public void onInitView(RecycleViewHolder holder, ManagerShopBean managerShopBean, int position) {
+        AutoUtils.autoSize(holder.getView());
         findViews(holder.getView());
         shopTitle.setText(managerShopBean.shopTitle);
         exchangePrice.setText("兑换价： " + managerShopBean.exchangePrice);
@@ -88,7 +90,7 @@ public class ShopManagerAdapter extends MyBaseRecycleAdapter<ManagerShopBean> {
             public void onClick(View v, int id) {
                 switch (id) {
                     case R.id.tv_click_1:
-                        goToActivityByClass( EditShopActivity.class);
+                        goToActivityByClass(EditShopActivity.class);
                         break;
                     case R.id.tv_click_2:
                         break;

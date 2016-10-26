@@ -4,6 +4,7 @@ import android.os.Handler;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.huiyouhui.R;
@@ -38,6 +39,10 @@ public class ShopSettingActivity extends BaseActivity {
         tv8 = (TextView) findViewById(R.id.tv_8);
         tv9 = (TextView) findViewById(R.id.tv_9);
         tv12 = (TextView) findViewById(R.id.tv_12);
+
+        ll2 = (LinearLayout) findViewById(R.id.ll_2);
+        ll3 = (LinearLayout) findViewById(R.id.ll_3);
+        ll4 = (LinearLayout) findViewById(R.id.ll_4);
         mWipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -67,20 +72,18 @@ public class ShopSettingActivity extends BaseActivity {
 
     @Override
     public void setListeners() {
-        setOnListeners(cv2, iv2, iv3, iv4, tv5, tv6, tv7, tv8, tv9);
+        setOnListeners(ll2, ll3, ll4, tv7, tv8, tv9);
         setOnClick(new onClick() {
             @Override
             public void onClick(View v, int id) {
                 switch (id) {
-                    case R.id.cv_2:
-                        goToActivityByClass( UpdateSignboardActivity.class);
+                    case R.id.ll_2:
+                        goToActivityByClass(UpdateSignboardActivity.class);
                         break;
-                    case R.id.iv_2:
+                    case R.id.ll_3:
+                        goToActivityByClass(SetPhoneActivity.class);
                         break;
-                    case R.id.iv_3:
-                        goToActivityByClass( SetPhoneActivity.class);
-                        break;
-                    case R.id.iv_4:
+                    case R.id.ll_4:
                         goToActivityByClass(SetContactActivity.class);
                         break;
                     case R.id.tv_5:
@@ -88,13 +91,13 @@ public class ShopSettingActivity extends BaseActivity {
                     case R.id.tv_6:
                         break;
                     case R.id.tv_7:
-                        goToActivityByClass( SetPhotosActivity.class);
+                        goToActivityByClass(SetPhotosActivity.class);
                         break;
                     case R.id.tv_8:
-                        goToActivityByClass( SetAddressActivity.class);
+                        goToActivityByClass(SetAddressActivity.class);
                         break;
                     case R.id.tv_9:
-                        goToActivityByClass( SetLocationActivity.class);
+                        goToActivityByClass(SetLocationActivity.class);
                         break;
                 }
             }
@@ -115,6 +118,7 @@ public class ShopSettingActivity extends BaseActivity {
     private TextView tv7;
     private TextView tv8;
     private TextView tv9;
+    private LinearLayout ll2, ll3, ll4;
 
 
 }

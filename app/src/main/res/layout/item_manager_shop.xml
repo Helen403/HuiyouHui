@@ -8,7 +8,7 @@
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
-        android:layout_height="20px"
+        android:layout_height="8dp"
         android:background="@color/bg_color_division" />
 
     <RelativeLayout
@@ -18,9 +18,9 @@
 
         <ImageView
             android:id="@+id/imageUrl"
-            android:layout_width="120px"
-            android:layout_height="120px"
-            android:layout_margin="40px"
+            android:layout_width="77dp"
+            android:layout_height="77dp"
+            android:layout_margin="18dp"
             android:scaleType="fitXY"
             android:src="@mipmap/nor_menu_per" />
 
@@ -29,12 +29,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/imageUrl"
-            android:layout_marginBottom="5px"
+            android:layout_marginBottom="3dp"
             android:layout_toEndOf="@+id/imageUrl"
             android:layout_toRightOf="@+id/imageUrl"
             android:text="title"
             android:textColor="#a9a9a9"
-            android:textSize="16sp" />
+            android:textSize="17sp" />
 
         <LinearLayout
             android:id="@+id/linearLayout"
@@ -43,14 +43,16 @@
             android:layout_alignBottom="@+id/imageUrl"
             android:layout_below="@+id/shopTitle"
             android:layout_toRightOf="@+id/imageUrl"
+            android:gravity="center_vertical"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/exchangePrice"
                 android:layout_width="wrap_content"
                 android:layout_height="0dip"
-                android:layout_marginBottom="2px"
+                android:layout_marginBottom="1dp"
                 android:layout_weight="1"
+                android:gravity="center_vertical"
                 android:text="exchangePrice"
                 android:textColor="@color/bg_color"
                 android:textSize="12sp" />
@@ -60,6 +62,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="0dip"
                 android:layout_weight="1"
+                android:gravity="center_vertical"
                 android:text="finalPrice"
                 android:textColor="@color/bg_color"
                 android:textSize="12sp" />
@@ -73,7 +76,7 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignTop="@+id/shopTitle"
-            android:layout_marginRight="18px"
+            android:layout_marginRight="10dp"
             android:shadowDx="1"
             android:shadowDy="1"
             android:shadowRadius="1"
@@ -96,16 +99,16 @@
     </RelativeLayout>
 
     <View
-        android:layout_marginTop="15px"
         android:layout_width="match_parent"
         android:layout_height="1dp"
+        android:layout_marginTop="15px"
         android:background="@color/bg_color_division" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="10px">
+        android:padding="5dp">
 
         <RelativeLayout
             android:layout_width="0dip"
@@ -119,7 +122,7 @@
                 android:layout_height="wrap_content"
                 android:drawableLeft="@mipmap/btn_pr_edit"
                 android:drawablePadding="5dp"
-                android:padding="10px"
+                android:padding="10dp"
                 android:text="编辑"
                 android:textColor="#a9a9a9" />
         </RelativeLayout>
@@ -136,7 +139,7 @@
                 android:layout_height="wrap_content"
                 android:drawableLeft="@mipmap/btn_pr_shelves"
                 android:drawablePadding="5dp"
-                android:padding="10px"
+                android:padding="10dp"
                 android:text="下架"
                 android:textColor="#a9a9a9" />
         </RelativeLayout>
@@ -153,7 +156,7 @@
                 android:layout_height="wrap_content"
                 android:drawableLeft="@mipmap/btn_pr_added"
                 android:drawablePadding="5dp"
-                android:padding="10px"
+                android:padding="10dp"
                 android:text="上架"
                 android:textColor="#a9a9a9" />
         </RelativeLayout>
@@ -170,11 +173,9 @@
                 android:layout_height="wrap_content"
                 android:drawableLeft="@mipmap/btn_pr_delete"
                 android:drawablePadding="5dp"
-                android:padding="10px"
+                android:padding="10dp"
                 android:text="删除"
                 android:textColor="#a9a9a9" />
         </RelativeLayout>
-
-
     </LinearLayout>
 </com.zhy.autolayout.AutoLinearLayout>
