@@ -4,17 +4,17 @@ import com.huiyouhui.R;
 import com.huiyouhui.lib.base.BaseActivity;
 
 /**
- * Created by Administrator on 2016/10/25.
+ * Created by Administrator on 2016/10/26.
  */
-public class EvaluationDetailActivity extends BaseActivity {
+public class EditNoticeActivity extends BaseActivity {
     @Override
     public int getContentView() {
-        return R.layout.activity_evaluation_detail;
+        return R.layout.activity_edit_notice;
     }
 
     @Override
     public void findViews() {
-        setTitle("评价详情");
+        setTitle("编辑公告");
     }
 
     @Override

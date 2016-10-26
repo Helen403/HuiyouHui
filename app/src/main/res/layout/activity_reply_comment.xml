@@ -136,6 +136,7 @@
             android:layout_height="match_parent"
             android:layout_below="@+id/tv_8"
             android:gravity="left"
+            android:background="@null"
             android:hint="想对顾客说点什么呢!"
             android:padding="10dp"
             android:textColorHint="#DCDCDC" />

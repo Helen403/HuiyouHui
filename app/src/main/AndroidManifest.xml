@@ -32,13 +32,12 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <!-- 蓝牙分享所需的权限 -->
     <uses-permission android:name="android.permission.BLUETOOTH" />
-
     <!-- 以下为百度地图-->
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
 
-    <application
 
+    <application
         android:name=".lib.base.BaseApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -109,6 +108,13 @@
         <activity android:name=".activity.AddJobActivity" />
         <activity android:name=".activity.EvaluationManagementActivity" />
         <activity android:name=".activity.ReplyCommentActivity" />
+        <activity android:name=".activity.EvaluationDetailActivity" />
+        <activity android:name=".activity.SetNoticeActivity" />
+        <activity android:name=".activity.EditNoticeActivity" />
+        <activity android:name=".activity.AdvertisementManagerActivity" />
+        <activity android:name=".activity.AddAdvertisementActivity" />
+        <activity android:name=".activity.EditAdvertisementActivity"/>
+
         <activity android:name=".activity.EvaluationDetailActivity" />
         <activity android:name=".activity.EditJobActivity" />
 

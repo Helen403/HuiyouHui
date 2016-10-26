@@ -2,12 +2,14 @@ package com.huiyouhui.factroy;
 
 import android.text.TextUtils;
 
+import com.huiyouhui.activity.AdvertisementManagerActivity;
 import com.huiyouhui.activity.EvaluationManagementActivity;
 import com.huiyouhui.activity.FinanceActivity;
 import com.huiyouhui.activity.JobManageActivity;
 import com.huiyouhui.activity.MemberManagerActivity;
 import com.huiyouhui.activity.PayRecordActivity;
 import com.huiyouhui.activity.ProductManagerActivity;
+import com.huiyouhui.activity.SetNoticeActivity;
 import com.huiyouhui.activity.ShopSettingActivity;
 
 /**
@@ -36,11 +38,11 @@ public class ProjectFactroy {
             case "会员管理":
                 return MemberManagerActivity.class;
             case "公告设置":
-                return ProductManagerActivity.class;
+                return SetNoticeActivity.class;
             case "评价管理":
                 return EvaluationManagementActivity.class;
             case "广告管理":
-                return ProductManagerActivity.class;
+                return AdvertisementManagerActivity.class;
             case "招聘管理":
                 return JobManageActivity.class;
             default:
